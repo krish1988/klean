@@ -1,0 +1,1182 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Kélane Créations — Tapissier d'ameublement à Rixheim. Rideaux, stores, coussins, fauteuils, restauration. Artisanat sur-mesure en Alsace.">
+<title>Kélane Créations · Tapissier d'ameublement · Rixheim</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..700&family=Italiana&family=Outfit:wght@200..700&display=swap">
+
+<style id="dynamic-css"></style>
+<style>
+:root{
+  --ivory:#f3ece1;--ivory-2:#ebe2d2;--cream:#e3d8c2;--paper:#f7f2e8;
+  --ink:#1b1812;--ink-2:#2b2520;--smoke:#75706a;--line:#bdb09a;
+  --rust:#b65436;--rust-deep:#7d3620;--sage:#6a7256;--gold:#b8965a;--olive:#9c9268;
+  --ff-display:"Fraunces", "Times New Roman", serif;
+  --ff-italic:"Italiana", "Cormorant Garamond", serif;
+  --ff-body:"Outfit", system-ui, sans-serif;
+  --easing:cubic-bezier(.2,.7,.2,1);
+  --easing-soft:cubic-bezier(.5,0,0,1);
+  --pad-x:clamp(20px, 4vw, 64px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+html,body{background:var(--ivory);color:var(--ink);font-family:var(--ff-body);font-weight:300;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto;background:var(--cream)}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:1000;opacity:.05;mix-blend-mode:multiply;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>")}
+
+.nav{position:fixed;top:0;left:0;right:0;z-index:60;padding:18px var(--pad-x);display:flex;align-items:center;justify-content:space-between;transition:background .5s var(--easing), backdrop-filter .5s var(--easing), color .5s var(--easing);color:var(--ivory);mix-blend-mode:difference}
+.nav.solid{mix-blend-mode:normal;color:var(--ink);background:rgba(243,236,225,.85);backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid rgba(27,24,18,.06)}
+.nav__brand{font-family:var(--ff-display);font-weight:400;font-size:22px;letter-spacing:.01em;display:flex;align-items:baseline;gap:.4em}
+.nav__brand i{font-family:var(--ff-italic);font-style:normal;font-size:.7em;letter-spacing:.18em;text-transform:uppercase;opacity:.7}
+.nav__menu{display:flex;gap:34px;align-items:center}
+.nav__link{font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:400;position:relative;padding:6px 0;transition:opacity .3s ease}
+.nav__link::after{content:"";position:absolute;left:0;right:100%;bottom:2px;height:1px;background:currentColor;transition:right .5s var(--easing)}
+.nav__link:hover::after,.nav__link.active::after{right:0}
+.nav__link.active{font-weight:500}
+.nav__cta{font-size:12px;letter-spacing:.18em;text-transform:uppercase;padding:11px 20px;border:1px solid currentColor;border-radius:999px;transition:background .3s var(--easing), color .3s var(--easing)}
+.nav__cta:hover{background:currentColor;color:var(--ivory)}
+.nav.solid .nav__cta:hover{color:var(--ivory)}
+.nav__burger{display:none;width:28px;height:18px;position:relative}
+.nav__burger span{position:absolute;left:0;right:0;height:1px;background:currentColor;transition:transform .4s var(--easing), opacity .3s}
+.nav__burger span:nth-child(1){top:2px}.nav__burger span:nth-child(2){top:50%}.nav__burger span:nth-child(3){bottom:2px}
+.nav.open .nav__burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav.open .nav__burger span:nth-child(2){opacity:0}
+.nav.open .nav__burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+.page{display:none}.page.active{display:block;animation:page-in .9s var(--easing) both}
+@keyframes page-in{from{opacity:0;filter:blur(6px);transform:translateY(14px)}to{opacity:1;filter:none;transform:none}}
+
+.eyebrow{font-size:11px;letter-spacing:.34em;text-transform:uppercase;display:inline-flex;align-items:center;gap:14px;color:var(--ink-2)}
+.eyebrow::before{content:"";display:inline-block;width:36px;height:1px;background:currentColor}
+.h-display{font-family:var(--ff-display);font-weight:300;font-variation-settings:"opsz" 144,"SOFT" 40;letter-spacing:-.025em;line-height:.95;font-size:clamp(48px, 8vw, 132px)}
+.h-display em{font-family:var(--ff-italic);font-style:normal;font-weight:400;letter-spacing:0}
+.h-section{font-family:var(--ff-display);font-weight:300;letter-spacing:-.02em;line-height:1;font-size:clamp(40px, 6vw, 84px)}
+.h-section em{font-family:var(--ff-italic);font-style:normal}
+.lead{font-size:clamp(16px,1.2vw,19px);line-height:1.55;color:var(--ink-2);max-width:54ch}
+.btn{display:inline-flex;align-items:center;gap:14px;font-size:13px;letter-spacing:.2em;text-transform:uppercase;padding:18px 28px;border-radius:999px;background:var(--ink);color:var(--ivory);transition:transform .4s var(--easing), background .4s var(--easing), padding .4s var(--easing)}
+.btn:hover{background:var(--rust);padding-right:38px}
+.btn .arrow{transition:transform .4s var(--easing)}
+.btn:hover .arrow{transform:translateX(6px)}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 1s var(--easing-soft), transform 1s var(--easing-soft)}
+.reveal.in{opacity:1;transform:none}
+.reveal[data-delay="1"]{transition-delay:.08s}.reveal[data-delay="2"]{transition-delay:.16s}.reveal[data-delay="3"]{transition-delay:.24s}.reveal[data-delay="4"]{transition-delay:.32s}
+
+.zoom{overflow:hidden}.zoom img{transition:transform 1.4s var(--easing)}.zoom:hover img{transform:scale(1.06)}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;background:var(--ink);color:var(--ivory);overflow:hidden}
+.hero__media{position:absolute;inset:0}
+.hero__media img{width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(.55) contrast(1.05) saturate(.9);transform:scale(1.05);animation:hero-ken 18s var(--easing) infinite alternate}
+@keyframes hero-ken{from{transform:scale(1.05) translateY(0)}to{transform:scale(1.12) translateY(-2%)}}
+.hero__media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(27,24,18,.4) 0%,rgba(27,24,18,.15) 30%,rgba(27,24,18,.7) 100%)}
+.hero__content{position:relative;z-index:2;min-height:100vh;display:grid;grid-template-rows:auto 1fr auto;padding:140px var(--pad-x) 56px}
+.hero__meta{display:flex;justify-content:space-between;align-items:flex-start;font-size:11px;letter-spacing:.3em;text-transform:uppercase;opacity:.75}
+.hero__meta > div + div{text-align:right}
+.hero__title{align-self:center;font-family:var(--ff-display);font-weight:200;font-variation-settings:"opsz" 144,"SOFT" 60;letter-spacing:-.03em;line-height:.86;font-size:clamp(64px, 14vw, 240px)}
+.hero__title em{font-family:var(--ff-italic);font-style:normal;font-weight:400;font-size:.9em}
+.hero__title .l1{display:block;animation:rise .9s .2s var(--easing) both}
+.hero__title .l2{display:block;text-indent:.25em;animation:rise .9s .35s var(--easing) both}
+@keyframes rise{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+.hero__bottom{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;animation:rise .9s .6s var(--easing) both}
+.hero__tag{max-width:38ch;font-size:15px;line-height:1.55;opacity:.85}
+.hero__scroll{display:inline-flex;align-items:center;gap:14px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;opacity:.75}
+.hero__scroll span{position:relative;width:34px;height:1px;background:currentColor;overflow:hidden}
+.hero__scroll span::after{content:"";position:absolute;left:-100%;top:0;width:100%;height:100%;background:var(--rust);animation:slide 2.4s var(--easing) infinite}
+@keyframes slide{0%{left:-100%}50%{left:0}100%{left:100%}}
+
+.hero-strip{background:var(--ink);padding:0 var(--pad-x) 80px;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:16px}
+.hero-strip__item{position:relative;overflow:hidden;border-radius:4px;aspect-ratio:4/3}
+.hero-strip__item img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--easing), filter .6s var(--easing);filter:saturate(.85) brightness(.92)}
+.hero-strip__item:hover img{transform:scale(1.05);filter:saturate(1) brightness(1)}
+.hero-strip__item::after{content:attr(data-label);position:absolute;left:18px;bottom:14px;color:var(--ivory);font-size:11px;letter-spacing:.28em;text-transform:uppercase;background:rgba(27,24,18,.55);padding:6px 12px;border-radius:999px;backdrop-filter:blur(6px)}
+
+.manifesto{padding:clamp(80px,12vw,180px) var(--pad-x);background:var(--paper);position:relative;overflow:hidden}
+.manifesto__inner{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(40px,8vw,120px);align-items:start;position:relative;z-index:2}
+.manifesto__inner .h-section{margin-top:8px}
+.manifesto p{font-size:clamp(18px,1.3vw,22px);line-height:1.55;color:var(--ink-2);font-family:var(--ff-display);font-weight:300;font-variation-settings:"opsz" 24}
+.manifesto p + p{margin-top:1.1em}
+.manifesto__sig{margin-top:36px;display:flex;align-items:center;gap:18px;font-family:var(--ff-italic);font-size:24px;color:var(--rust)}
+.manifesto__sig::before{content:"";width:64px;height:1px;background:currentColor;display:inline-block}
+.manifesto__deco{position:absolute;right:-80px;top:-40px;width:380px;opacity:.06;pointer-events:none;transform:rotate(-12deg)}
+
+.marquee{background:var(--ink);color:var(--ivory);padding:32px 0;overflow:hidden;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08)}
+.marquee__track{display:flex;gap:80px;animation:scroll 38s linear infinite;width:max-content}
+.marquee__track span{font-family:var(--ff-display);font-weight:300;font-size:clamp(36px,5vw,72px);letter-spacing:-.02em;white-space:nowrap;display:inline-flex;align-items:center;gap:80px}
+.marquee__track span::after{content:"✦";color:var(--rust);font-size:.55em}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+.lookbook{padding:clamp(80px,12vw,160px) var(--pad-x);background:var(--ivory)}
+.lookbook__head{max-width:1320px;margin:0 auto 64px;display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap}
+.lookbook__grid{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:minmax(180px,auto);gap:18px}
+.lb{position:relative;overflow:hidden;border-radius:4px;background:var(--cream)}
+.lb img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--easing)}
+.lb:hover img{transform:scale(1.06)}
+.lb__caption{position:absolute;left:18px;bottom:18px;right:18px;color:var(--ivory);font-family:var(--ff-display);font-weight:300;font-size:24px;letter-spacing:-.01em;line-height:1.1;text-shadow:0 2px 24px rgba(0,0,0,.4);z-index:2}
+.lb__caption small{display:block;font-family:var(--ff-body);font-size:10px;letter-spacing:.3em;text-transform:uppercase;margin-bottom:8px;opacity:.85}
+.lb__caption em{font-family:var(--ff-italic);font-style:normal;color:var(--rust)}
+.lb::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.65) 100%);opacity:.85;transition:opacity .5s var(--easing);z-index:1}
+.lb:hover::after{opacity:.5}
+.lb-1{grid-column:span 7;grid-row:span 2}.lb-2{grid-column:span 5;grid-row:span 1}.lb-3{grid-column:span 5;grid-row:span 1}
+.lb-4{grid-column:span 4;grid-row:span 2}.lb-5{grid-column:span 4;grid-row:span 1}.lb-6{grid-column:span 4;grid-row:span 1}
+.lb--text{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:32px;background:var(--ink);color:var(--ivory)}
+.lb--text::after{display:none}
+.lb--text .eyebrow{color:rgba(243,236,225,.6)}
+.lb--text h3{font-family:var(--ff-display);font-weight:300;font-size:clamp(28px,2.2vw,36px);letter-spacing:-.015em;line-height:1.1;margin-top:18px}
+.lb--text h3 em{font-family:var(--ff-italic);font-style:normal;color:var(--rust)}
+.lb--text p{font-size:13px;line-height:1.6;color:rgba(243,236,225,.7);margin-top:16px}
+
+.etoffes{padding:clamp(80px,12vw,160px) var(--pad-x);background:var(--paper);border-top:1px solid var(--line)}
+.etoffes__head{max-width:1320px;margin:0 auto 56px;display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap}
+.swatch-grid{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:20px}
+.swatch{position:relative;aspect-ratio:1/1;border-radius:6px;overflow:hidden;display:flex;align-items:flex-end;cursor:pointer;transition:transform .6s var(--easing),box-shadow .6s var(--easing);box-shadow:0 1px 4px rgba(27,24,18,.06)}
+.swatch:hover{transform:translateY(-6px) rotate(-1.2deg);box-shadow:0 14px 30px rgba(27,24,18,.18)}
+.swatch__label{position:relative;z-index:2;width:100%;padding:14px 16px;background:rgba(247,242,232,.92);backdrop-filter:blur(4px);display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(27,24,18,.08);transform:translateY(100%);transition:transform .5s var(--easing)}
+.swatch:hover .swatch__label{transform:translateY(0)}
+.swatch__name{font-family:var(--ff-display);font-size:17px;font-weight:400;letter-spacing:-.01em}
+.swatch__name em{font-family:var(--ff-italic);font-style:normal}
+.swatch__num{font-size:10px;letter-spacing:.24em;color:var(--smoke)}
+.swatch__pattern{position:absolute;inset:0;z-index:1}
+
+.svc-preview{padding:clamp(80px,12vw,160px) var(--pad-x);background:var(--ivory)}
+.svc-preview__head{max-width:1320px;margin:0 auto 64px;display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap}
+.svc-preview__head .lead{max-width:48ch}
+.svc-grid{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(12,1fr);gap:24px}
+.svc-card{position:relative;background:var(--cream);padding:32px 28px 28px;border-radius:6px;overflow:hidden;transition:transform .6s var(--easing), background .6s var(--easing);cursor:pointer;min-height:340px;display:flex;flex-direction:column;justify-content:space-between;z-index:1}
+.svc-card__bg{position:absolute;inset:0;z-index:-1;opacity:0;transition:opacity .6s var(--easing)}
+.svc-card__bg img{width:100%;height:100%;object-fit:cover;filter:brightness(.45)}
+.svc-card:hover{transform:translateY(-6px);color:var(--ivory)}
+.svc-card:hover .svc-card__bg{opacity:1}
+.svc-card:hover .svc-card__num{color:var(--rust)}
+.svc-card:hover .svc-card__shape{transform:scale(1.4) rotate(15deg);opacity:.18}
+.svc-card__num{font-family:var(--ff-display);font-style:italic;font-weight:300;font-size:14px;color:var(--smoke);transition:color .5s var(--easing);position:relative;z-index:2}
+.svc-card__title{font-family:var(--ff-display);font-weight:300;font-size:clamp(28px,2.6vw,40px);letter-spacing:-.02em;line-height:1.05;position:relative;z-index:2}
+.svc-card__title em{font-family:var(--ff-italic);font-style:normal}
+.svc-card__desc{font-size:14px;line-height:1.55;color:var(--ink-2);transition:color .5s var(--easing);position:relative;z-index:2}
+.svc-card:hover .svc-card__desc{color:rgba(243,236,225,.85)}
+.svc-card__shape{position:absolute;right:-30px;bottom:-30px;width:160px;height:160px;border-radius:50%;background:var(--rust);opacity:.08;transition:transform .8s var(--easing),opacity .6s var(--easing);pointer-events:none;z-index:0}
+.svc-card.s-1{grid-column:span 5;min-height:420px;background:var(--ink);color:var(--ivory)}
+.svc-card.s-1 .svc-card__desc{color:rgba(243,236,225,.7)}
+.svc-card.s-1 .svc-card__shape{background:var(--rust);opacity:.4;width:240px;height:240px}
+.svc-card.s-1:hover .svc-card__shape{background:var(--ink);opacity:.18}
+.svc-card.s-2{grid-column:span 4}.svc-card.s-3{grid-column:span 3}.svc-card.s-4{grid-column:span 4}.svc-card.s-5{grid-column:span 4}.svc-card.s-6{grid-column:span 4}
+
+.photo-strip{display:grid;grid-template-columns:1.6fr 1fr;min-height:84vh;background:var(--ink)}
+.photo-strip__media{position:relative;overflow:hidden}
+.photo-strip__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.6s var(--easing)}
+.photo-strip:hover .photo-strip__media img{transform:scale(1.05)}
+.photo-strip__content{padding:clamp(48px,7vw,96px);color:var(--ivory);display:flex;flex-direction:column;justify-content:center;gap:32px}
+.photo-strip__content .eyebrow{color:rgba(243,236,225,.7)}
+.photo-strip__content .h-section em{color:var(--rust)}
+.photo-strip__content p{font-size:17px;line-height:1.6;color:rgba(243,236,225,.78);max-width:46ch}
+.photo-strip__stats{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;border-top:1px solid rgba(255,255,255,.12);padding-top:32px;margin-top:16px}
+.stat__num{font-family:var(--ff-display);font-size:clamp(36px,3.5vw,56px);font-weight:300}
+.stat__label{font-size:11px;letter-spacing:.24em;text-transform:uppercase;opacity:.6;margin-top:6px}
+
+.portfolio{padding:clamp(80px,12vw,160px) var(--pad-x);background:var(--paper)}
+.portfolio__head{max-width:1320px;margin:0 auto 56px;display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap}
+.portfolio__grid{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.work{position:relative;overflow:hidden;border-radius:4px;background:var(--cream);cursor:pointer;aspect-ratio:4/5}
+.work:nth-child(2),.work:nth-child(5){aspect-ratio:3/4;align-self:flex-end}
+.work:nth-child(3){aspect-ratio:5/6;margin-top:48px}
+.work:nth-child(4){aspect-ratio:5/6}
+.work img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--easing), filter .6s var(--easing);filter:saturate(.9)}
+.work:hover img{transform:scale(1.07);filter:saturate(1.1)}
+.work__overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:24px;color:var(--ivory);background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.78) 100%);opacity:0;transform:translateY(20px);transition:opacity .5s var(--easing), transform .5s var(--easing)}
+.work:hover .work__overlay{opacity:1;transform:translateY(0)}
+.work__cat{font-size:10px;letter-spacing:.3em;text-transform:uppercase;opacity:.85;margin-bottom:8px;color:var(--rust)}
+.work__title{font-family:var(--ff-display);font-weight:300;font-size:22px;line-height:1.1;letter-spacing:-.01em}
+.work__title em{font-family:var(--ff-italic);font-style:normal}
+.work__num{position:absolute;top:18px;left:20px;z-index:2;font-family:var(--ff-italic);font-size:18px;color:var(--ivory);background:rgba(27,24,18,.5);backdrop-filter:blur(6px);width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+
+.testimonials{padding:clamp(80px,12vw,160px) var(--pad-x);background:var(--ivory);overflow:hidden}
+.testimonials__head{max-width:1320px;margin:0 auto 64px;text-align:center}
+.testimonials__head .eyebrow{justify-content:center}
+.testimonials__head .eyebrow::before{display:none}
+.testimonials__head .eyebrow::after{content:"";display:inline-block;width:36px;height:1px;background:currentColor}
+.testimonials__grid{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.testi{background:var(--paper);padding:40px 36px;border-radius:6px;position:relative;display:flex;flex-direction:column;gap:24px;border:1px solid transparent;transition:border-color .5s var(--easing), transform .5s var(--easing)}
+.testi:hover{border-color:var(--rust);transform:translateY(-4px)}
+.testi__quote-mark{font-family:var(--ff-italic);font-size:80px;line-height:.5;color:var(--rust);height:24px}
+.testi__text{font-family:var(--ff-display);font-weight:300;font-variation-settings:"opsz" 24;font-size:18px;line-height:1.5;color:var(--ink-2);flex:1}
+.testi__author{display:flex;align-items:center;gap:14px;border-top:1px solid var(--line);padding-top:20px}
+.testi__avatar{width:48px;height:48px;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;font-family:var(--ff-display);font-size:18px;color:var(--rust);font-weight:400}
+.testi__name{font-family:var(--ff-display);font-weight:400;font-size:16px}
+.testi__role{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--smoke);margin-top:2px}
+
+.contact-teaser{padding:clamp(80px,12vw,180px) var(--pad-x);color:var(--ivory);text-align:center;position:relative;overflow:hidden;background:var(--ink)}
+.contact-teaser__bg{position:absolute;inset:0;z-index:0;filter:brightness(.25) saturate(.6)}
+.contact-teaser__bg img{width:100%;height:100%;object-fit:cover}
+.contact-teaser > *:not(.contact-teaser__bg){position:relative;z-index:2}
+.contact-teaser .eyebrow{color:rgba(243,236,225,.7);justify-content:center}
+.contact-teaser .eyebrow::after{content:"";display:inline-block;width:36px;height:1px;background:currentColor}
+.contact-teaser .h-display{margin:24px auto 16px;max-width:14ch;color:var(--ivory)}
+.contact-teaser .h-display em{color:var(--rust)}
+.contact-teaser .lead{margin:0 auto 40px;color:rgba(243,236,225,.78)}
+.contact-teaser .btn{margin-top:8px;background:var(--ivory);color:var(--ink)}
+.contact-teaser .btn:hover{background:var(--rust);color:var(--ivory)}
+
+.svc-hero{padding:180px var(--pad-x) 80px;background:var(--ivory);border-bottom:1px solid var(--line)}
+.svc-hero__inner{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end}
+.svc-hero__title em{color:var(--rust)}
+.svc-list{background:var(--ivory);padding-bottom:40px}
+.svc-row{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:80px 1fr 1.2fr 200px;gap:48px;padding:clamp(40px,5vw,80px) var(--pad-x);border-bottom:1px solid var(--line);align-items:center;transition:background .5s var(--easing);position:relative}
+.svc-row:last-child{border-bottom:0}
+.svc-row:hover{background:var(--paper)}
+.svc-row:hover .svc-row__title em{color:var(--rust)}
+.svc-row:hover .svc-row__thumb img{transform:scale(1.08)}
+.svc-row__num{font-family:var(--ff-display);font-style:italic;font-weight:300;font-size:24px;color:var(--smoke)}
+.svc-row__title{font-family:var(--ff-display);font-weight:300;font-size:clamp(40px,5vw,72px);letter-spacing:-.02em;line-height:1;transition:color .5s var(--easing)}
+.svc-row__title em{font-family:var(--ff-italic);font-style:normal;transition:color .5s var(--easing)}
+.svc-row__body{font-size:16px;line-height:1.7;color:var(--ink-2)}
+.svc-row__tags{margin-top:24px;display:flex;flex-wrap:wrap;gap:8px}
+.svc-row__tags span{font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:8px 14px;border:1px solid var(--line);border-radius:999px;color:var(--ink-2)}
+.svc-row__thumb{position:relative;overflow:hidden;border-radius:6px;aspect-ratio:4/5}
+.svc-row__thumb img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--easing)}
+
+.svc-spotlight{padding:clamp(80px,12vw,140px) var(--pad-x);background:var(--ink);color:var(--ivory)}
+.svc-spotlight__inner{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.svc-spotlight img{aspect-ratio:4/5;width:100%;object-fit:cover;border-radius:4px}
+.svc-spotlight h2 em{color:var(--rust)}
+.svc-spotlight p{color:rgba(243,236,225,.78);font-size:17px;line-height:1.7;margin-top:24px;max-width:48ch}
+.svc-spotlight ul{margin-top:32px;list-style:none}
+.svc-spotlight ul li{display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:15px}
+.svc-spotlight ul li::before{content:"—";color:var(--rust)}
+
+.process{padding:clamp(80px,12vw,140px) var(--pad-x);background:var(--paper)}
+.process__head{max-width:1320px;margin:0 auto 64px;text-align:center}
+.process__head .eyebrow{justify-content:center}
+.process__head .eyebrow::after{content:"";display:inline-block;width:36px;height:1px;background:currentColor}
+.process__grid{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative}
+.process__grid::before{content:"";position:absolute;left:8%;right:8%;top:50px;height:1px;background:linear-gradient(90deg, transparent, var(--rust), transparent);opacity:.4}
+.step{position:relative;text-align:center;background:var(--paper);padding:20px 16px}
+.step__circle{width:100px;height:100px;border-radius:50%;background:var(--ivory);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;position:relative;z-index:2;transition:background .5s var(--easing), border-color .5s var(--easing), transform .5s var(--easing)}
+.step:hover .step__circle{background:var(--ink);border-color:var(--ink);transform:scale(1.05) rotate(-6deg)}
+.step:hover .step__circle svg{stroke:var(--rust)}
+.step__circle svg{width:40px;height:40px;stroke:var(--ink);transition:stroke .5s var(--easing)}
+.step__num{font-family:var(--ff-italic);font-size:14px;color:var(--rust);margin-bottom:8px;display:block}
+.step h4{font-family:var(--ff-display);font-weight:400;font-size:20px;letter-spacing:-.01em;margin-bottom:10px}
+.step p{font-size:13px;line-height:1.6;color:var(--ink-2)}
+
+.about-hero{position:relative;min-height:80vh;background:var(--ink);overflow:hidden;display:grid;grid-template-columns:1fr 1fr;gap:0}
+.about-hero__text{padding:180px var(--pad-x) 80px;display:flex;flex-direction:column;justify-content:center;gap:32px;color:var(--ivory)}
+.about-hero__text .h-display em{color:var(--rust)}
+.about-hero__text p{font-size:18px;line-height:1.65;color:rgba(243,236,225,.78);max-width:42ch}
+.about-hero__media{position:relative;overflow:hidden}
+.about-hero__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.about-hero__media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(27,24,18,.4) 0%,transparent 30%)}
+
+.atelier-gallery{padding:clamp(80px,12vw,140px) var(--pad-x);background:var(--paper)}
+.atelier-gallery__head{max-width:1320px;margin:0 auto 56px;display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap}
+.atelier-grid{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:140px;gap:16px}
+.ag{position:relative;overflow:hidden;border-radius:4px;background:var(--cream)}
+.ag img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--easing)}
+.ag:hover img{transform:scale(1.06)}
+.ag-1{grid-column:span 5;grid-row:span 3}.ag-2{grid-column:span 4;grid-row:span 2}.ag-3{grid-column:span 3;grid-row:span 2}.ag-4{grid-column:span 4;grid-row:span 2}.ag-5{grid-column:span 3;grid-row:span 3}.ag-6{grid-column:span 5;grid-row:span 2}.ag-7{grid-column:span 4;grid-row:span 2}
+
+.story{padding:clamp(80px,12vw,160px) var(--pad-x);background:var(--ivory)}
+.story__inner{max-width:980px;margin:0 auto}
+.story h3{font-family:var(--ff-display);font-weight:300;font-size:clamp(28px,2.4vw,38px);letter-spacing:-.01em;line-height:1.25;margin-top:64px;margin-bottom:18px}
+.story h3:first-of-type{margin-top:48px}
+.story h3 em{font-family:var(--ff-italic);font-style:normal;color:var(--rust)}
+.story p{font-family:var(--ff-display);font-weight:300;font-variation-settings:"opsz" 24;font-size:19px;line-height:1.65;color:var(--ink-2)}
+.story p + p{margin-top:1em}
+.story .pull{font-family:var(--ff-italic);font-size:clamp(28px,3vw,42px);line-height:1.25;color:var(--ink);padding:48px 0 48px 32px;border-left:2px solid var(--rust);margin:48px 0}
+
+.values{padding:clamp(80px,12vw,140px) var(--pad-x);background:var(--paper)}
+.values__inner{max-width:1320px;margin:0 auto}
+.values__head{display:flex;justify-content:space-between;align-items:end;margin-bottom:64px;gap:48px;flex-wrap:wrap}
+.values__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:48px}
+.value__num{font-family:var(--ff-italic);font-size:48px;color:var(--rust);display:block;margin-bottom:16px;line-height:1}
+.value h4{font-family:var(--ff-display);font-weight:300;font-size:26px;letter-spacing:-.01em;margin-bottom:14px}
+.value p{font-size:15px;line-height:1.65;color:var(--ink-2)}
+
+.partners{padding:clamp(60px,10vw,120px) var(--pad-x);background:var(--ivory);text-align:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.partners__head{max-width:1320px;margin:0 auto 40px}
+.partners__row{max-width:1320px;margin:0 auto;display:flex;justify-content:center;align-items:center;gap:clamp(32px,6vw,80px);flex-wrap:wrap}
+.partners__row span{font-family:var(--ff-display);font-weight:300;font-size:clamp(20px,2vw,30px);letter-spacing:.04em;color:var(--ink-2);opacity:.7;transition:opacity .4s var(--easing), color .4s var(--easing)}
+.partners__row span:hover{opacity:1;color:var(--rust)}
+.partners__row span em{font-family:var(--ff-italic);font-style:normal}
+
+.contact-hero{position:relative;min-height:50vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:var(--ivory);overflow:hidden;padding:160px var(--pad-x) 80px;background:var(--ink)}
+.contact-hero__bg{position:absolute;inset:0;z-index:0;filter:brightness(.4) saturate(.9)}
+.contact-hero__bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.05);animation:hero-ken 24s var(--easing) infinite alternate}
+.contact-hero > *:not(.contact-hero__bg){position:relative;z-index:2}
+.contact-hero .eyebrow{color:rgba(243,236,225,.8);justify-content:center;margin-bottom:24px}
+.contact-hero .eyebrow::after{content:"";display:inline-block;width:36px;height:1px;background:currentColor}
+.contact-hero .h-display{max-width:18ch;margin:0 auto}
+.contact-hero .h-display em{color:var(--rust)}
+.contact-hero .lead{margin:32px auto 0;color:rgba(243,236,225,.85)}
+
+.contact-page{padding:clamp(60px,8vw,100px) var(--pad-x) 80px;background:var(--ivory)}
+.contact-grid{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1fr 1.2fr;gap:80px;align-items:start}
+.contact-form{background:var(--paper);padding:48px;border-radius:6px}
+.field{margin-bottom:28px;position:relative}
+.field label{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--smoke);margin-bottom:10px;display:block}
+.field input,.field textarea,.field select{width:100%;border:0;border-bottom:1px solid var(--line);background:transparent;padding:10px 0 12px;font:inherit;color:var(--ink);font-size:16px;transition:border-color .3s var(--easing)}
+.field input:focus,.field textarea:focus,.field select:focus{outline:0;border-color:var(--ink)}
+.field textarea{resize:vertical;min-height:120px;font-family:inherit}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.contact-form .btn{margin-top:8px}
+.contact-info{display:flex;flex-direction:column;gap:36px}
+.info-card{border:1px solid var(--line);border-radius:6px;padding:32px;display:grid;grid-template-columns:48px 1fr;gap:20px;align-items:start;transition:background .4s var(--easing),border-color .4s var(--easing)}
+.info-card:hover{background:var(--paper);border-color:var(--ink)}
+.info-card__ico{width:48px;height:48px;border-radius:50%;background:var(--ink);color:var(--rust);display:flex;align-items:center;justify-content:center}
+.info-card__ico svg{width:20px;height:20px}
+.info-card__label{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--smoke);margin-bottom:6px}
+.info-card__value{font-family:var(--ff-display);font-weight:300;font-size:22px;line-height:1.35;letter-spacing:-.005em}
+.info-card__value a:hover{color:var(--rust)}
+.hours-card{padding:32px;border:1px solid var(--line);border-radius:6px}
+.hours-card h3{font-family:var(--ff-display);font-weight:300;font-size:22px;margin-bottom:20px}
+.hours-card h3 em{font-family:var(--ff-italic);font-style:normal;color:var(--rust)}
+.hours-list{display:grid;gap:12px}
+.hours-row{display:flex;justify-content:space-between;align-items:center;font-size:14px;padding:6px 0;border-bottom:1px dashed rgba(0,0,0,.08)}
+.hours-row:last-child{border-bottom:0}
+.hours-row.closed{color:var(--smoke)}
+.hours-row.closed .hours-time{font-style:italic;font-family:var(--ff-italic)}
+.hours-row.today{color:var(--rust);font-weight:500}
+.hours-row.today::before{content:"●";margin-right:8px;font-size:10px}
+.map-wrap{margin-top:80px;max-width:1320px;margin-inline:auto;border-radius:6px;overflow:hidden;height:520px;border:1px solid var(--line);filter:grayscale(.7) contrast(.95);transition:filter .6s var(--easing);position:relative}
+.map-wrap:hover{filter:none}
+.map-wrap iframe{width:100%;height:100%;border:0;display:block}
+
+.footer{background:var(--ink);color:var(--ivory);padding:clamp(60px,8vw,100px) var(--pad-x) 32px}
+.footer__inner{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px}
+.footer__brand{font-family:var(--ff-display);font-weight:300;font-size:48px;letter-spacing:-.02em;line-height:1}
+.footer__brand em{font-family:var(--ff-italic);font-style:normal;color:var(--rust)}
+.footer__tag{margin-top:18px;color:rgba(243,236,225,.6);font-size:14px;line-height:1.6;max-width:36ch}
+.footer h5{font-size:11px;letter-spacing:.28em;text-transform:uppercase;margin-bottom:20px;color:rgba(243,236,225,.5)}
+.footer ul{list-style:none}
+.footer li{margin-bottom:10px;font-size:14px;color:rgba(243,236,225,.85)}
+.footer a{transition:color .3s var(--easing)}
+.footer a:hover{color:var(--rust)}
+.footer__bottom{max-width:1320px;margin:64px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;font-size:12px;color:rgba(243,236,225,.45);letter-spacing:.08em}
+
+@media (max-width:980px){
+  .nav__menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--paper);flex-direction:column;justify-content:center;align-items:center;gap:36px;z-index:50;color:var(--ink)}
+  .nav.open .nav__menu{display:flex}
+  .nav.open{color:var(--ink);mix-blend-mode:normal;background:transparent}
+  .nav__menu .nav__link{font-size:18px}.nav__burger{display:block;z-index:60}
+  .hero-strip{grid-template-columns:1fr 1fr}
+  .manifesto__inner{grid-template-columns:1fr;gap:32px}
+  .lookbook__grid{grid-template-columns:repeat(6,1fr)}
+  .lb-1{grid-column:span 6;grid-row:span 2}.lb-2,.lb-3{grid-column:span 6}.lb-4{grid-column:span 6;grid-row:span 1}.lb-5,.lb-6{grid-column:span 3}
+  .svc-grid{grid-template-columns:repeat(6,1fr)}
+  .svc-card.s-1{grid-column:span 6;min-height:360px}
+  .svc-card.s-2,.svc-card.s-3,.svc-card.s-4,.svc-card.s-5{grid-column:span 3}
+  .svc-card.s-6{grid-column:span 6}
+  .photo-strip{grid-template-columns:1fr}.photo-strip__media{min-height:50vh}
+  .portfolio__grid{grid-template-columns:1fr 1fr}
+  .work,.work:nth-child(3),.work:nth-child(4){margin-top:0;aspect-ratio:4/5}
+  .testimonials__grid{grid-template-columns:1fr;gap:24px}
+  .svc-hero__inner{grid-template-columns:1fr}
+  .svc-row{grid-template-columns:1fr;gap:24px}
+  .svc-row__num{font-size:18px}.svc-row__thumb{aspect-ratio:16/9;max-width:100%}
+  .svc-spotlight__inner{grid-template-columns:1fr;gap:40px}
+  .process__grid{grid-template-columns:1fr 1fr;gap:32px}
+  .process__grid::before{display:none}
+  .about-hero{grid-template-columns:1fr;min-height:auto}
+  .about-hero__media{min-height:50vh}
+  .atelier-grid{grid-template-columns:repeat(6,1fr);grid-auto-rows:120px}
+  .ag-1{grid-column:span 6;grid-row:span 3}
+  .ag-2,.ag-3,.ag-4,.ag-5,.ag-6,.ag-7{grid-column:span 3;grid-row:span 2}
+  .values__grid{grid-template-columns:1fr;gap:32px}
+  .contact-grid{grid-template-columns:1fr;gap:40px}
+  .contact-form{padding:32px}.field-row{grid-template-columns:1fr}
+  .footer__inner{grid-template-columns:1fr 1fr;gap:32px}
+}
+@media (max-width:560px){
+  .hero-strip{grid-template-columns:1fr}.footer__inner{grid-template-columns:1fr}
+  .hero__meta{flex-direction:column;gap:8px}
+  .hero__meta > div + div{text-align:left}
+  .hero__bottom{flex-direction:column;align-items:flex-start;gap:24px}
+  .portfolio__grid{grid-template-columns:1fr}.process__grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a href="#home" class="nav__brand" data-route="home">Kélane <i>créations</i></a>
+  <nav class="nav__menu">
+    <a href="#home" class="nav__link" data-route="home">Accueil</a>
+    <a href="#services" class="nav__link" data-route="services">Services</a>
+    <a href="#about" class="nav__link" data-route="about">L'Atelier</a>
+    <a href="#contact" class="nav__link" data-route="contact">Contact</a>
+    <a href="tel:0389604345" class="nav__cta">03 89 60 43 45</a>
+  </nav>
+  <button class="nav__burger" aria-label="Menu" id="burger"><span></span><span></span><span></span></button>
+</header>
+
+<!-- HOME -->
+<main id="page-home" class="page active">
+
+  <section class="hero">
+    <div class="hero__media"><img data-img="storefront" alt="Boutique Kélane Créations"></div>
+    <div class="hero__content">
+      <div class="hero__meta">
+        <div>EST. RIXHEIM · ALSACE</div>
+        <div>Tapissier d'ameublement<br>Créations sur-mesure</div>
+      </div>
+      <h1 class="hero__title">
+        <span class="l1">Kélane</span>
+        <span class="l2"><em>créations</em></span>
+      </h1>
+      <div class="hero__bottom">
+        <p class="hero__tag">L'art du sur-mesure depuis notre atelier alsacien. Rideaux, stores, fauteuils et coussins façonnés avec exigence et passion du détail.</p>
+        <a href="#services" class="hero__scroll" data-route="services">Découvrir <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero-strip">
+    <div class="hero-strip__item" data-label="Showroom"><img data-img="interior-tree" alt="Showroom mural"></div>
+    <div class="hero-strip__item" data-label="Collection"><img data-img="cushions-top" alt="Collection de coussins"></div>
+    <div class="hero-strip__item" data-label="Détails"><img data-img="interior-swan" alt="Détail fauteuil"></div>
+  </section>
+
+  <section class="manifesto">
+    <svg class="manifesto__deco" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <g fill="none" stroke="currentColor" stroke-width="1">
+        <circle cx="100" cy="100" r="80"/><circle cx="100" cy="100" r="60"/><circle cx="100" cy="100" r="40"/>
+        <path d="M20 100 Q100 20 180 100 T20 100"/><path d="M20 100 Q100 180 180 100"/>
+      </g>
+    </svg>
+    <div class="manifesto__inner">
+      <div class="reveal">
+        <div class="eyebrow">Notre maison</div>
+        <h2 class="h-section" style="margin-top:24px">L'<em>élégance</em>,<br>une affaire de matière.</h2>
+      </div>
+      <div class="reveal" data-delay="2">
+        <p>Chez Kélane Créations, chaque pièce naît d'un dialogue. Entre une étoffe et une lumière, entre un fauteuil et son histoire, entre un client et notre atelier.</p>
+        <p>Nous travaillons les tissus comme on écrit un récit : choix du fil, tension du point, justesse du tombé. Une intimité avec la matière qui ne s'enseigne pas — elle se transmet.</p>
+        <div class="manifesto__sig">L'atelier Kélane</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="marquee">
+    <div class="marquee__track">
+      <span>Rideaux</span><span>Stores</span><span>Coussins</span><span>Fauteuils</span><span>Restauration</span><span>Sur-mesure</span>
+      <span>Rideaux</span><span>Stores</span><span>Coussins</span><span>Fauteuils</span><span>Restauration</span><span>Sur-mesure</span>
+    </div>
+  </section>
+
+  <section class="lookbook">
+    <div class="lookbook__head reveal">
+      <div>
+        <div class="eyebrow">Lookbook</div>
+        <h2 class="h-section" style="margin-top:24px">Esprit de <em>maison</em>.</h2>
+      </div>
+      <p class="lead">Un aperçu des ambiances créées dans notre showroom. Couleurs, matières et compositions qui font la signature Kélane.</p>
+    </div>
+    <div class="lookbook__grid">
+      <div class="lb lb-1 reveal">
+        <img data-img="interior-mural" alt="Vue showroom complet">
+        <div class="lb__caption"><small>Édition № 01</small>Un <em>récit</em><br>en clair-obscur.</div>
+      </div>
+      <div class="lb lb-2 reveal" data-delay="1">
+        <img data-img="cushions-mid" alt="Étagère de coussins">
+        <div class="lb__caption"><small>Collection · Coussins</small>Les <em>accents</em>.</div>
+      </div>
+      <div class="lb lb-3 reveal" data-delay="2">
+        <img data-img="interior-swan" alt="Fauteuil contemporain">
+        <div class="lb__caption"><small>Pièces signature</small>Le <em>fauteuil</em>.</div>
+      </div>
+      <div class="lb lb-4 reveal" data-delay="1">
+        <img data-img="storefront-window" alt="Vitrine boutique">
+        <div class="lb__caption"><small>Vitrine</small>Une <em>vitrine</em><br>vivante.</div>
+      </div>
+      <div class="lb lb--text lb-5 reveal" data-delay="2">
+        <div class="eyebrow">Manifeste</div>
+        <h3>Tisser le <em>quotidien</em>.</h3>
+        <p>Une étoffe bien posée transforme une pièce en lieu. C'est ce que nous cherchons à chaque ouvrage.</p>
+      </div>
+      <div class="lb lb-6 reveal" data-delay="3">
+        <img data-img="cushions-detail" alt="Détail textile">
+        <div class="lb__caption"><small>Détail · Texture</small><em>Toucher</em>.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="etoffes">
+    <div class="etoffes__head reveal">
+      <div>
+        <div class="eyebrow">Bibliothèque de matières</div>
+        <h2 class="h-section" style="margin-top:24px">Étoffes <em>choisies</em>.</h2>
+      </div>
+      <p class="lead">Plus de trois cents références d'étoffes sélectionnées avec exigence. Un aperçu de notre vocabulaire de matières.</p>
+    </div>
+
+    <div class="swatch-grid">
+      <div class="swatch reveal">
+        <div class="swatch__pattern">
+          <svg width="100%" height="100%" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <defs><pattern id="p1" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#d8c4a3"/><path d="M0 0 L6 6 M6 0 L0 6" stroke="#9c8459" stroke-width=".5" opacity=".6"/><path d="M0 3 L6 3 M3 0 L3 6" stroke="#b8a07a" stroke-width=".3"/></pattern></defs>
+            <rect width="100%" height="100%" fill="url(#p1)"/>
+          </svg>
+        </div>
+        <div class="swatch__label"><span class="swatch__name">Lin <em>naturel</em></span><span class="swatch__num">№ 01</span></div>
+      </div>
+      <div class="swatch reveal" data-delay="1">
+        <div class="swatch__pattern">
+          <svg width="100%" height="100%" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="g2" cx="50%" cy="40%" r="70%"><stop offset="0%" stop-color="#a8482e"/><stop offset="100%" stop-color="#5b2615"/></radialGradient>
+              <filter id="n2"><feTurbulence baseFrequency=".8" numOctaves="2"/><feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .35 0"/></filter>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#g2)"/>
+            <rect width="100%" height="100%" filter="url(#n2)" opacity=".4"/>
+          </svg>
+        </div>
+        <div class="swatch__label"><span class="swatch__name">Velours <em>terre</em></span><span class="swatch__num">№ 02</span></div>
+      </div>
+      <div class="swatch reveal" data-delay="2">
+        <div class="swatch__pattern">
+          <svg width="100%" height="100%" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <defs><pattern id="p3" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#eee5d1"/><circle cx="2" cy="2" r="1.4" fill="#c9b88e"/><circle cx="6" cy="6" r="1.6" fill="#b5a172"/><circle cx="6" cy="2" r="1" fill="#d4c4a0"/><circle cx="2" cy="6" r="1.2" fill="#c9b88e"/></pattern></defs>
+            <rect width="100%" height="100%" fill="url(#p3)"/>
+          </svg>
+        </div>
+        <div class="swatch__label"><span class="swatch__name">Bouclé <em>écru</em></span><span class="swatch__num">№ 03</span></div>
+      </div>
+      <div class="swatch reveal" data-delay="3">
+        <div class="swatch__pattern">
+          <svg width="100%" height="100%" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <defs><pattern id="p4" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><rect width="20" height="20" fill="#f3ece1"/><path d="M0 0 L10 0 L10 5 L5 5 L5 10 L0 10 Z M10 10 L20 10 L20 15 L15 15 L15 20 L10 20 Z M5 5 L10 10 L5 10 Z M15 15 L20 20 L15 20 Z" fill="#2b2520"/></pattern></defs>
+            <rect width="100%" height="100%" fill="url(#p4)"/>
+          </svg>
+        </div>
+        <div class="swatch__label"><span class="swatch__name">Pied-de-<em>poule</em></span><span class="swatch__num">№ 04</span></div>
+      </div>
+      <div class="swatch reveal" data-delay="1">
+        <div class="swatch__pattern">
+          <svg width="100%" height="100%" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <defs><pattern id="p5" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#6a7256"/><path d="M-1 5 L7 -3 M-1 9 L7 1 M-1 13 L7 5" stroke="#4d5440" stroke-width="1.5"/></pattern></defs>
+            <rect width="100%" height="100%" fill="url(#p5)"/>
+          </svg>
+        </div>
+        <div class="swatch__label"><span class="swatch__name">Sergé <em>olive</em></span><span class="swatch__num">№ 05</span></div>
+      </div>
+      <div class="swatch reveal" data-delay="2">
+        <div class="swatch__pattern">
+          <svg width="100%" height="100%" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="p6" x="0" y="0" width="48" height="48" patternUnits="userSpaceOnUse">
+                <rect width="48" height="48" fill="#1b1812"/>
+                <g fill="none" stroke="#b8965a" stroke-width=".8" opacity=".85">
+                  <path d="M24 6 Q34 16 24 24 Q14 16 24 6 Z"/>
+                  <path d="M24 24 Q34 32 24 42 Q14 32 24 24 Z"/>
+                  <circle cx="24" cy="24" r="2.5"/>
+                  <path d="M6 24 Q14 14 24 24 Q14 34 6 24"/>
+                  <path d="M42 24 Q34 14 24 24 Q34 34 42 24"/>
+                </g>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#p6)"/>
+          </svg>
+        </div>
+        <div class="swatch__label"><span class="swatch__name">Damas <em>or</em></span><span class="swatch__num">№ 06</span></div>
+      </div>
+      <div class="swatch reveal" data-delay="3">
+        <div class="swatch__pattern">
+          <svg width="100%" height="100%" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="g7" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#e8d6c8"/>
+                <stop offset="40%" stop-color="#c89b86"/>
+                <stop offset="60%" stop-color="#e0bdaa"/>
+                <stop offset="100%" stop-color="#9c6b58"/>
+              </linearGradient>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#g7)"/>
+            <g opacity=".25" stroke="#fff" stroke-width="1" fill="none">
+              <path d="M0 30 Q60 10 120 30"/><path d="M0 60 Q60 40 120 60"/><path d="M0 90 Q60 70 120 90"/>
+            </g>
+          </svg>
+        </div>
+        <div class="swatch__label"><span class="swatch__name">Soie <em>rosée</em></span><span class="swatch__num">№ 07</span></div>
+      </div>
+      <div class="swatch reveal" data-delay="1">
+        <div class="swatch__pattern">
+          <svg width="100%" height="100%" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <defs><pattern id="p8" x="0" y="0" width="16" height="100" patternUnits="userSpaceOnUse"><rect width="16" height="100" fill="#ebe2d2"/><rect x="0" width="2" height="100" fill="#1b1812"/><rect x="6" width="1" height="100" fill="#b65436"/><rect x="11" width=".5" height="100" fill="#1b1812"/></pattern></defs>
+            <rect width="100%" height="100%" fill="url(#p8)"/>
+          </svg>
+        </div>
+        <div class="swatch__label"><span class="swatch__name">Rayé <em>tailleur</em></span><span class="swatch__num">№ 08</span></div>
+      </div>
+      <div class="swatch reveal" data-delay="2">
+        <div class="swatch__pattern">
+          <svg width="100%" height="100%" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="p9" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                <rect width="40" height="40" fill="#e8e4d2"/>
+                <g fill="#6a7256">
+                  <ellipse cx="10" cy="10" rx="4" ry="2" transform="rotate(30 10 10)"/>
+                  <ellipse cx="30" cy="22" rx="3.5" ry="1.8" transform="rotate(-25 30 22)"/>
+                  <ellipse cx="18" cy="32" rx="3.5" ry="1.8" transform="rotate(60 18 32)"/>
+                </g>
+                <g fill="#b65436">
+                  <circle cx="10" cy="10" r="1.4"/><circle cx="30" cy="22" r="1.4"/><circle cx="18" cy="32" r="1.4"/>
+                </g>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#p9)"/>
+          </svg>
+        </div>
+        <div class="swatch__label"><span class="swatch__name">Floral <em>jardin</em></span><span class="swatch__num">№ 09</span></div>
+      </div>
+      <div class="swatch reveal" data-delay="3">
+        <div class="swatch__pattern">
+          <svg width="100%" height="100%" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="p10" x="0" y="0" width="3" height="3" patternUnits="userSpaceOnUse"><rect width="3" height="3" fill="#1b1812"/><circle cx="1.5" cy="1.5" r=".3" fill="#3b342a"/></pattern>
+              <filter id="nn10"><feTurbulence baseFrequency=".9" numOctaves="2"/><feColorMatrix values="0 0 0 0 .2  0 0 0 0 .18  0 0 0 0 .14  0 0 0 .5 0"/></filter>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#p10)"/>
+            <rect width="100%" height="100%" filter="url(#nn10)" opacity=".4"/>
+          </svg>
+        </div>
+        <div class="swatch__label"><span class="swatch__name">Coton <em>encre</em></span><span class="swatch__num">№ 10</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-preview">
+    <div class="svc-preview__head reveal">
+      <div>
+        <div class="eyebrow">Nos métiers</div>
+        <h2 class="h-section" style="margin-top:24px">Des gestes<br><em>maîtrisés</em>.</h2>
+      </div>
+      <p class="lead">De la confection des rideaux à la restauration des fauteuils anciens, nos savoir-faire répondent à toutes les exigences de l'art décoratif.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc-card s-1 reveal" onclick="route('services')">
+        <div class="svc-card__bg"><img data-img="cushions-detail" alt=""></div>
+        <div>
+          <div class="svc-card__num">01 — Signature</div>
+          <h3 class="svc-card__title" style="margin-top:18px">Tapisserie<br><em>d'ameublement</em></h3>
+        </div>
+        <p class="svc-card__desc">Remise en état complète de fauteuils, canapés et sièges anciens. Sangles, ressorts, mousses, tissu d'apparat.</p>
+        <div class="svc-card__shape"></div>
+      </article>
+      <article class="svc-card s-2 reveal" data-delay="1" onclick="route('services')">
+        <div class="svc-card__bg"><img data-img="interior-tree" alt=""></div>
+        <div>
+          <div class="svc-card__num">02</div>
+          <h3 class="svc-card__title" style="margin-top:18px">Rideaux<br><em>sur-mesure</em></h3>
+        </div>
+        <p class="svc-card__desc">Tombés, doublures, finitions. Sélection d'étoffes haut de gamme.</p>
+        <div class="svc-card__shape"></div>
+      </article>
+      <article class="svc-card s-3 reveal" data-delay="2" onclick="route('services')">
+        <div class="svc-card__bg"><img data-img="storefront-window" alt=""></div>
+        <div>
+          <div class="svc-card__num">03</div>
+          <h3 class="svc-card__title" style="margin-top:18px">Stores</h3>
+        </div>
+        <p class="svc-card__desc">Bateau, enrouleur, vénitien.</p>
+        <div class="svc-card__shape"></div>
+      </article>
+      <article class="svc-card s-4 reveal" data-delay="1" onclick="route('services')">
+        <div class="svc-card__bg"><img data-img="cushions-top" alt=""></div>
+        <div>
+          <div class="svc-card__num">04</div>
+          <h3 class="svc-card__title" style="margin-top:18px">Coussins</h3>
+        </div>
+        <p class="svc-card__desc">Pièces uniques ou collections, en accord parfait avec vos intérieurs.</p>
+        <div class="svc-card__shape"></div>
+      </article>
+      <article class="svc-card s-5 reveal" data-delay="2" onclick="route('services')">
+        <div class="svc-card__bg"><img data-img="interior-swan" alt=""></div>
+        <div>
+          <div class="svc-card__num">05</div>
+          <h3 class="svc-card__title" style="margin-top:18px">Restauration</h3>
+        </div>
+        <p class="svc-card__desc">Pièces anciennes, sièges de famille, mobilier d'art.</p>
+        <div class="svc-card__shape"></div>
+      </article>
+      <article class="svc-card s-6 reveal" data-delay="3" onclick="route('services')">
+        <div class="svc-card__bg"><img data-img="interior-sofa" alt=""></div>
+        <div>
+          <div class="svc-card__num">06</div>
+          <h3 class="svc-card__title" style="margin-top:18px">Livraison &amp; pose</h3>
+        </div>
+        <p class="svc-card__desc">Pose à domicile, conseils et finitions sur place.</p>
+        <div class="svc-card__shape"></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="photo-strip">
+    <div class="photo-strip__media"><img data-img="cushions-display" alt="Collection de coussins Kélane"></div>
+    <div class="photo-strip__content">
+      <div class="eyebrow reveal">Showroom</div>
+      <h2 class="h-section reveal" data-delay="1">Une <em>collection</em><br>vivante.</h2>
+      <p class="reveal" data-delay="2">Plus de trois cents références d'étoffes et de cuirs sélectionnés auprès des plus grandes maisons : Nobilis, Casal, Zephyr&amp;Co. Une bibliothèque de matières où votre projet trouve sa voix.</p>
+      <div class="photo-strip__stats reveal" data-delay="3">
+        <div class="stat"><div class="stat__num">300<span style="font-size:.5em">+</span></div><div class="stat__label">Étoffes</div></div>
+        <div class="stat"><div class="stat__num">8</div><div class="stat__label">Maisons partenaires</div></div>
+        <div class="stat"><div class="stat__num">100<span style="font-size:.5em">%</span></div><div class="stat__label">Sur-mesure</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio">
+    <div class="portfolio__head reveal">
+      <div>
+        <div class="eyebrow">Réalisations</div>
+        <h2 class="h-section" style="margin-top:24px">Quelques <em>histoires</em>.</h2>
+      </div>
+      <p class="lead">Un échantillon de projets réalisés en atelier — particuliers, professionnels, restaurations délicates.</p>
+    </div>
+    <div class="portfolio__grid">
+      <article class="work reveal">
+        <span class="work__num">01</span>
+        <img data-img="interior-tree" alt="">
+        <div class="work__overlay">
+          <span class="work__cat">Aménagement complet</span>
+          <h3 class="work__title">Maison de <em>maître</em><br>Mulhouse</h3>
+        </div>
+      </article>
+      <article class="work reveal" data-delay="1">
+        <span class="work__num">02</span>
+        <img data-img="cushions-mid" alt="">
+        <div class="work__overlay">
+          <span class="work__cat">Coussins · Collection</span>
+          <h3 class="work__title">Suite <em>parentale</em><br>Bâle</h3>
+        </div>
+      </article>
+      <article class="work reveal" data-delay="2">
+        <span class="work__num">03</span>
+        <img data-img="interior-swan" alt="">
+        <div class="work__overlay">
+          <span class="work__cat">Fauteuil contemporain</span>
+          <h3 class="work__title">Salon <em>privé</em><br>Riedisheim</h3>
+        </div>
+      </article>
+      <article class="work reveal" data-delay="1">
+        <span class="work__num">04</span>
+        <img data-img="storefront-window" alt="">
+        <div class="work__overlay">
+          <span class="work__cat">Rideaux sur-mesure</span>
+          <h3 class="work__title">Bureau <em>d'architecte</em><br>Saint-Louis</h3>
+        </div>
+      </article>
+      <article class="work reveal" data-delay="2">
+        <span class="work__num">05</span>
+        <img data-img="cushions-top" alt="">
+        <div class="work__overlay">
+          <span class="work__cat">Coussins · Hôtellerie</span>
+          <h3 class="work__title">Lobby <em>hôtel</em><br>Colmar</h3>
+        </div>
+      </article>
+      <article class="work reveal" data-delay="3">
+        <span class="work__num">06</span>
+        <img data-img="interior-sofa" alt="">
+        <div class="work__overlay">
+          <span class="work__cat">Restauration · Canapé</span>
+          <h3 class="work__title">Pièce de <em>famille</em><br>Rixheim</h3>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="testimonials__head reveal">
+      <div class="eyebrow">Témoignages</div>
+      <h2 class="h-section" style="margin-top:24px">Ce qu'on <em>nous dit</em>.</h2>
+    </div>
+    <div class="testimonials__grid">
+      <div class="testi reveal">
+        <div class="testi__quote-mark">"</div>
+        <p class="testi__text">Un savoir-faire rare et un sens du conseil exceptionnel. Le résultat dépasse nos attentes — les rideaux transforment littéralement la pièce.</p>
+        <div class="testi__author"><div class="testi__avatar">SR</div><div><div class="testi__name">Sophie R.</div><div class="testi__role">Particulier · Mulhouse</div></div></div>
+      </div>
+      <div class="testi reveal" data-delay="1">
+        <div class="testi__quote-mark">"</div>
+        <p class="testi__text">Travail d'orfèvre sur un fauteuil de famille. Maxime et son équipe ont su respecter le caractère de la pièce tout en la modernisant.</p>
+        <div class="testi__author"><div class="testi__avatar">JM</div><div><div class="testi__name">Jean-Marc B.</div><div class="testi__role">Particulier · Bâle</div></div></div>
+      </div>
+      <div class="testi reveal" data-delay="2">
+        <div class="testi__quote-mark">"</div>
+        <p class="testi__text">Pour nos suites hôtelières, nous cherchions un atelier capable de comprendre une charte. Kélane Créations a livré dans les temps, sans compromis.</p>
+        <div class="testi__author"><div class="testi__avatar">CL</div><div><div class="testi__name">Camille L.</div><div class="testi__role">Hôtellerie · Colmar</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-teaser">
+    <div class="contact-teaser__bg"><img data-img="storefront" alt=""></div>
+    <div class="eyebrow reveal">Prendre rendez-vous</div>
+    <h2 class="h-display reveal" data-delay="1">Venez à <em>l'atelier</em>.</h2>
+    <p class="lead reveal" data-delay="2">120 Rue de l'Île Napoléon, Rixheim.<br>Du lundi au vendredi de 9h à 17h.</p>
+    <a href="#contact" class="btn reveal" data-delay="3" data-route="contact">Nous rencontrer <span class="arrow">→</span></a>
+  </section>
+
+</main>
+
+<!-- SERVICES -->
+<main id="page-services" class="page">
+  <section class="svc-hero">
+    <div class="svc-hero__inner">
+      <div>
+        <div class="eyebrow reveal">Services</div>
+        <h1 class="h-display svc-hero__title reveal" data-delay="1" style="margin-top:24px">Nos <em>savoir-faire</em>.</h1>
+      </div>
+      <p class="lead reveal" data-delay="2">Un atelier complet pour habiller, restaurer et transformer vos intérieurs. Chaque mission est traitée avec la même exigence : qualité des matières, précision du geste, accompagnement personnalisé.</p>
+    </div>
+  </section>
+
+  <section class="svc-list">
+    <div class="svc-row reveal">
+      <div class="svc-row__num">01</div>
+      <h2 class="svc-row__title">Tapisserie<br><em>d'ameublement</em></h2>
+      <div class="svc-row__body">
+        Remise en état complète de vos sièges : démontage, dégarnissage, réfection des sangles, des ressorts, des crins et des mousses, jusqu'à la pose du tissu d'apparat. Nous travaillons aussi bien le siège contemporain que la bergère Louis XV.
+        <div class="svc-row__tags"><span>Fauteuils</span><span>Canapés</span><span>Banquettes</span><span>Sièges anciens</span></div>
+      </div>
+      <div class="svc-row__thumb"><img data-img="cushions-detail" alt=""></div>
+    </div>
+    <div class="svc-row reveal">
+      <div class="svc-row__num">02</div>
+      <h2 class="svc-row__title">Rideaux <em>sur-mesure</em></h2>
+      <div class="svc-row__body">
+        Étude des tombés et des têtes de rideaux, choix des doublures et thermo-collants, finitions à la main pour les pièces d'exception. Confection en atelier puis pose à domicile sur tringles, rails ou systèmes motorisés.
+        <div class="svc-row__tags"><span>À plis</span><span>À œillets</span><span>Voilages</span><span>Doubles rideaux</span></div>
+      </div>
+      <div class="svc-row__thumb"><img data-img="interior-tree" alt=""></div>
+    </div>
+    <div class="svc-row reveal">
+      <div class="svc-row__num">03</div>
+      <h2 class="svc-row__title">Stores</h2>
+      <div class="svc-row__body">
+        Stores bateaux à plis croisés ou à plis plats, stores enrouleurs, stores vénitiens en bois noble. Réalisation dans le tissu de votre choix avec mécanismes silencieux et sécurisés conformes aux normes en vigueur.
+        <div class="svc-row__tags"><span>Bateau</span><span>Enrouleur</span><span>Vénitien</span><span>Motorisation</span></div>
+      </div>
+      <div class="svc-row__thumb"><img data-img="storefront-window" alt=""></div>
+    </div>
+    <div class="svc-row reveal">
+      <div class="svc-row__num">04</div>
+      <h2 class="svc-row__title">Coussins</h2>
+      <div class="svc-row__body">
+        Coussins décoratifs aux formes et dimensions de votre choix. Mariage des textures, broderies, passementeries, finitions piquées ou cordées. Une signature personnelle qui rythme l'espace.
+        <div class="svc-row__tags"><span>Décoratifs</span><span>Sièges</span><span>Banquettes</span><span>Extérieur</span></div>
+      </div>
+      <div class="svc-row__thumb"><img data-img="cushions-top" alt=""></div>
+    </div>
+    <div class="svc-row reveal">
+      <div class="svc-row__num">05</div>
+      <h2 class="svc-row__title">Restauration</h2>
+      <div class="svc-row__body">
+        Pièces de famille, mobilier d'époque, sièges chinés : nous redonnons une seconde vie aux meubles à valeur sentimentale ou patrimoniale, dans le respect des techniques d'origine.
+        <div class="svc-row__tags"><span>Sièges anciens</span><span>Bergères</span><span>Crapauds</span><span>Méridiennes</span></div>
+      </div>
+      <div class="svc-row__thumb"><img data-img="interior-swan" alt=""></div>
+    </div>
+    <div class="svc-row reveal">
+      <div class="svc-row__num">06</div>
+      <h2 class="svc-row__title">Réparations</h2>
+      <div class="svc-row__body">
+        Réfection ponctuelle d'un accoudoir, remplacement d'une mousse affaissée, ajustement d'un mécanisme, recoutu invisible. Pour donner aux pièces que vous aimez les années supplémentaires qu'elles méritent.
+        <div class="svc-row__tags"><span>Diagnostic</span><span>Devis gratuit</span><span>Interventions sur place</span></div>
+      </div>
+      <div class="svc-row__thumb"><img data-img="interior-sofa" alt=""></div>
+    </div>
+    <div class="svc-row reveal">
+      <div class="svc-row__num">07</div>
+      <h2 class="svc-row__title">Livraison &amp; <em>pose</em></h2>
+      <div class="svc-row__body">
+        Transport soigné de vos pièces, installation à domicile par notre équipe, conseils d'entretien et garantie sur les ouvrages. Un service complet, de l'atelier à votre intérieur.
+        <div class="svc-row__tags"><span>Alsace</span><span>Bâle &amp; environs</span><span>Sur devis</span></div>
+      </div>
+      <div class="svc-row__thumb"><img data-img="cushions-mid" alt=""></div>
+    </div>
+  </section>
+
+  <section class="process">
+    <div class="process__head reveal">
+      <div class="eyebrow">Notre méthode</div>
+      <h2 class="h-section" style="margin-top:24px">De la <em>visite</em> à la <em>pose</em>.</h2>
+    </div>
+    <div class="process__grid">
+      <div class="step reveal">
+        <span class="step__num">Étape 01</span>
+        <div class="step__circle"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.2"><path d="M12 21s-7-7.5-7-13a7 7 0 1 1 14 0c0 5.5-7 13-7 13z"/><circle cx="12" cy="8.5" r="2.5"/></svg></div>
+        <h4>Visite-conseil</h4>
+        <p>À domicile ou à l'atelier. Échanges sur le projet, prise de mesures, sensibilité aux ambiances.</p>
+      </div>
+      <div class="step reveal" data-delay="1">
+        <span class="step__num">Étape 02</span>
+        <div class="step__circle"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.2"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M4 9h16M9 4v16"/></svg></div>
+        <h4>Sélection des étoffes</h4>
+        <p>Présentation des matières adaptées à votre projet. Échantillons, lumières, mises en regard.</p>
+      </div>
+      <div class="step reveal" data-delay="2">
+        <span class="step__num">Étape 03</span>
+        <div class="step__circle"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.2"><path d="M3 7h18l-2 12H5L3 7z"/><path d="M3 7l1.5-3h15L21 7"/><path d="M9 11v4M15 11v4"/></svg></div>
+        <h4>Confection</h4>
+        <p>Travail en atelier à Rixheim. Découpe, assemblage, garnissage. Finitions à la main pour les pièces d'exception.</p>
+      </div>
+      <div class="step reveal" data-delay="3">
+        <span class="step__num">Étape 04</span>
+        <div class="step__circle"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.2"><path d="M3 12l3 3 5-5"/><path d="M21 6L11 16l-3-3"/></svg></div>
+        <h4>Pose &amp; suivi</h4>
+        <p>Installation à domicile, conseils d'entretien et garantie. L'ouvrage prend sa place.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-spotlight">
+    <div class="svc-spotlight__inner">
+      <img class="reveal" data-img="interior-mural" alt="Showroom Kélane">
+      <div>
+        <div class="eyebrow reveal" style="color:rgba(243,236,225,.7)">L'expérience Kélane</div>
+        <h2 class="h-section reveal" data-delay="1" style="margin-top:24px;color:var(--ivory)">Pourquoi nous <em>choisir</em>.</h2>
+        <p class="reveal" data-delay="2">Chaque projet suit un cheminement précis, pensé pour la justesse du résultat et la sérénité du parcours.</p>
+        <ul class="reveal" data-delay="3">
+          <li>Un atelier indépendant, à taille humaine</li>
+          <li>Plus de 300 références d'étoffes en showroom</li>
+          <li>Confection 100% sur-mesure</li>
+          <li>Pose et finitions à domicile</li>
+          <li>Garantie sur tous les ouvrages</li>
+          <li>Devis gratuit et sans engagement</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ABOUT -->
+<main id="page-about" class="page">
+  <section class="about-hero">
+    <div class="about-hero__text">
+      <div class="eyebrow reveal">L'Atelier</div>
+      <h1 class="h-display reveal" data-delay="1">Un <em>regard</em><br>sur la matière.</h1>
+      <p class="reveal" data-delay="2">Kélane Créations cultive l'art du tapissier-décorateur à Rixheim, dans le sillage des grandes traditions du textile alsacien. Un atelier indépendant, une équipe à taille humaine, une obsession unique : la qualité du geste.</p>
+    </div>
+    <div class="about-hero__media"><img data-img="interior-mural-2" alt="Intérieur de l'atelier Kélane"></div>
+  </section>
+
+  <section class="atelier-gallery">
+    <div class="atelier-gallery__head reveal">
+      <div>
+        <div class="eyebrow">L'atelier en images</div>
+        <h2 class="h-section" style="margin-top:24px">Un <em>lieu</em>, des matières.</h2>
+      </div>
+      <p class="lead">Notre showroom de Rixheim vous accueille pour voir, toucher, comparer. Un univers tactile où chaque projet trouve sa voix.</p>
+    </div>
+    <div class="atelier-grid">
+      <div class="ag ag-1 zoom reveal"><img data-img="interior-mural" alt=""></div>
+      <div class="ag ag-2 zoom reveal" data-delay="1"><img data-img="cushions-top" alt=""></div>
+      <div class="ag ag-3 zoom reveal" data-delay="2"><img data-img="storefront-logo" alt=""></div>
+      <div class="ag ag-4 zoom reveal" data-delay="1"><img data-img="cushions-mid" alt=""></div>
+      <div class="ag ag-5 zoom reveal" data-delay="2"><img data-img="interior-swan" alt=""></div>
+      <div class="ag ag-6 zoom reveal" data-delay="3"><img data-img="interior-sofa" alt=""></div>
+      <div class="ag ag-7 zoom reveal" data-delay="2"><img data-img="cushions-detail" alt=""></div>
+    </div>
+  </section>
+
+  <section class="story">
+    <div class="story__inner">
+      <h3 class="reveal">Une <em>maison</em> de famille,<br>une exigence de métier.</h3>
+      <p class="reveal">Né de la passion d'un couple pour les beaux tissus et le mobilier de caractère, l'atelier Kélane Créations est devenu en quelques années une référence sur l'axe Mulhouse-Bâle. Un lieu où l'on vient choisir une étoffe comme on choisirait un parfum : avec lenteur, en se laissant guider.</p>
+      <p class="reveal">Notre vocabulaire est celui du tapissier : sangles, crins, ressorts, embrasses, passementeries. Mais notre regard est résolument contemporain. Nous croyons qu'un savoir-faire ancien ne se transmet qu'à condition de le faire vivre dans nos intérieurs d'aujourd'hui.</p>
+      <div class="pull reveal">« Une étoffe bien posée raconte autant que le meuble qu'elle habille. »</div>
+      <h3 class="reveal">Les <em>matières</em><br>avant tout.</h3>
+      <p class="reveal">Nous travaillons en partenariat avec les plus belles éditions textiles européennes et nous prêtons une attention particulière aux fabrications française et italienne. Lin, velours, jacquards, soies tissées : chaque pièce mérite la matière qui lui rendra son éclat.</p>
+      <h3 class="reveal">Au cœur de <em>Rixheim</em>.</h3>
+      <p class="reveal">Notre showroom de la rue de l'Île Napoléon accueille particuliers, architectes d'intérieur et professionnels de l'hôtellerie. On y vient pour voir, toucher, comparer — et repartir avec un projet qui prend forme.</p>
+    </div>
+  </section>
+
+  <section class="partners">
+    <div class="partners__head reveal">
+      <div class="eyebrow" style="justify-content:center">Nos éditeurs</div>
+      <h3 style="font-family:var(--ff-display);font-weight:300;font-size:clamp(24px,2.2vw,32px);margin-top:16px">Maisons <em style="font-family:var(--ff-italic);font-style:normal;color:var(--rust)">partenaires</em>.</h3>
+    </div>
+    <div class="partners__row reveal" data-delay="1">
+      <span>Nobilis</span><span>Casal</span><span><em>Zephyr</em>&amp;Co</span><span>Pierre Frey</span><span>Designers Guild</span><span>Romo</span>
+    </div>
+  </section>
+
+  <section class="values">
+    <div class="values__inner">
+      <div class="values__head reveal">
+        <div>
+          <div class="eyebrow">Nos engagements</div>
+          <h2 class="h-section" style="margin-top:24px">Ce qui nous <em>tient.</em></h2>
+        </div>
+        <p class="lead">Quatre principes simples qui guident chaque choix, chaque pièce, chaque rendez-vous.</p>
+      </div>
+      <div class="values__grid">
+        <div class="value reveal"><span class="value__num">01</span><h4>Le geste juste</h4><p>La technique transmise par les maîtres tapissiers, appliquée avec rigueur à chaque ouvrage, du fauteuil de cuisine à la pièce de collection.</p></div>
+        <div class="value reveal" data-delay="1"><span class="value__num">02</span><h4>Le sur-mesure absolu</h4><p>Aucune commande ne ressemble à la précédente. Chaque projet est pensé pour un lieu, une lumière, une histoire.</p></div>
+        <div class="value reveal" data-delay="2"><span class="value__num">03</span><h4>Des matières choisies</h4><p>Étoffes européennes, fournisseurs sélectionnés un par un. La beauté commence avant la première coupe.</p></div>
+        <div class="value reveal" data-delay="3"><span class="value__num">04</span><h4>Le temps qu'il faut</h4><p>Nous travaillons à la cadence de l'ouvrage, jamais celle de la production. C'est aussi cela, l'artisanat.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- CONTACT -->
+<main id="page-contact" class="page">
+  <section class="contact-hero">
+    <div class="contact-hero__bg"><img data-img="storefront" alt=""></div>
+    <div class="eyebrow reveal">Contact</div>
+    <h1 class="h-display reveal" data-delay="1">Parlons de votre <em>projet</em>.</h1>
+    <p class="lead reveal" data-delay="2" style="margin-top:32px">Devis, visite-conseil, simple avis. Nous sommes à votre écoute.</p>
+  </section>
+
+  <section class="contact-page">
+    <div class="contact-grid">
+      <form class="contact-form reveal" onsubmit="event.preventDefault(); this.querySelector('.btn').innerHTML='Merci ✦'; setTimeout(()=>this.reset(),100)">
+        <div class="field-row">
+          <div class="field"><label>Prénom</label><input type="text" name="firstname" required></div>
+          <div class="field"><label>Nom</label><input type="text" name="lastname" required></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label>Email</label><input type="email" name="email" required></div>
+          <div class="field"><label>Téléphone</label><input type="tel" name="phone"></div>
+        </div>
+        <div class="field">
+          <label>Type de projet</label>
+          <select name="project">
+            <option>Rideaux sur-mesure</option><option>Stores</option><option>Coussins</option>
+            <option>Tapisserie / réfection de siège</option><option>Restauration</option>
+            <option>Visite-conseil à domicile</option><option>Autre</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Votre message</label>
+          <textarea name="message" placeholder="Parlez-nous de votre intérieur, de la pièce concernée, de vos envies…" required></textarea>
+        </div>
+        <button type="submit" class="btn">Envoyer ma demande <span class="arrow">→</span></button>
+      </form>
+
+      <div class="contact-info">
+        <div class="info-card reveal" data-delay="1">
+          <div class="info-card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-7.5-7-13a7 7 0 1 1 14 0c0 5.5-7 13-7 13z"/><circle cx="12" cy="8.5" r="2.5"/></svg></div>
+          <div><div class="info-card__label">Atelier &amp; showroom</div><div class="info-card__value"><a href="https://maps.google.com/?q=120+Rue+de+l'%C3%8Ele+Napol%C3%A9on+68170+Rixheim" target="_blank" rel="noopener">120 Rue de l'Île Napoléon<br>68170 Rixheim, Alsace</a></div></div>
+        </div>
+        <div class="info-card reveal" data-delay="2">
+          <div class="info-card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.98.37 1.93.72 2.83a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.29a2 2 0 0 1 2.11-.45c.9.35 1.85.59 2.83.72A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div><div class="info-card__label">Téléphone</div><div class="info-card__value"><a href="tel:0389604345">03 89 60 43 45</a></div></div>
+        </div>
+        <div class="info-card reveal" data-delay="3">
+          <div class="info-card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div>
+          <div><div class="info-card__label">Écrivez-nous</div><div class="info-card__value"><a href="mailto:contact@kelanecreations.fr">contact@kelanecreations.fr</a></div></div>
+        </div>
+        <div class="hours-card reveal" data-delay="4">
+          <h3>Horaires d'<em>ouverture</em></h3>
+          <div class="hours-list">
+            <div class="hours-row" data-day="1"><span>Lundi</span><span class="hours-time">9h — 17h</span></div>
+            <div class="hours-row" data-day="2"><span>Mardi</span><span class="hours-time">9h — 17h</span></div>
+            <div class="hours-row" data-day="3"><span>Mercredi</span><span class="hours-time">9h — 17h</span></div>
+            <div class="hours-row" data-day="4"><span>Jeudi</span><span class="hours-time">9h — 17h</span></div>
+            <div class="hours-row" data-day="5"><span>Vendredi</span><span class="hours-time">9h — 17h</span></div>
+            <div class="hours-row closed" data-day="6"><span>Samedi</span><span class="hours-time">Sur rendez-vous</span></div>
+            <div class="hours-row closed" data-day="0"><span>Dimanche</span><span class="hours-time">Fermé</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="map-wrap reveal">
+      <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=120%20Rue%20de%20l%27%C3%8Ele%20Napol%C3%A9on%2068170%20Rixheim&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div>
+      <div class="footer__brand">Kélane <em>créations</em></div>
+      <p class="footer__tag">Tapissier d'ameublement à Rixheim. L'art du sur-mesure depuis notre atelier alsacien.</p>
+    </div>
+    <div>
+      <h5>Navigation</h5>
+      <ul>
+        <li><a href="#home" data-route="home">Accueil</a></li>
+        <li><a href="#services" data-route="services">Services</a></li>
+        <li><a href="#about" data-route="about">L'Atelier</a></li>
+        <li><a href="#contact" data-route="contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Services</h5>
+      <ul><li>Rideaux sur-mesure</li><li>Stores</li><li>Coussins</li><li>Tapisserie d'ameublement</li><li>Restauration</li></ul>
+    </div>
+    <div>
+      <h5>Contact</h5>
+      <ul><li>120 Rue de l'Île Napoléon</li><li>68170 Rixheim</li><li><a href="tel:0389604345">03 89 60 43 45</a></li><li><a href="mailto:contact@kelanecreations.fr">contact@kelanecreations.fr</a></li></ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div>© <span id="year"></span> Kélane Créations · Tous droits réservés</div>
+    <div>Made with care in Alsace · FR</div>
+  </div>
+</footer>
+
+<!-- IMAGES_PLACEHOLDER -->
+
+<script>
+const pages = ['home','services','about','contact'];
+function route(name, push=true){
+  if(!pages.includes(name)) name='home';
+  pages.forEach(p=>{ document.getElementById('page-'+p).classList.toggle('active', p===name) });
+  document.querySelectorAll('[data-route]').forEach(a=>a.classList.toggle('active', a.dataset.route===name));
+  if(push) history.pushState({page:name},'',`#${name}`);
+  window.scrollTo({top:0,behavior:'instant'});
+  setTimeout(initReveals, 50);
+  document.getElementById('nav').classList.remove('open');
+}
+document.addEventListener('click', e=>{
+  const a = e.target.closest('[data-route]'); if(!a) return;
+  e.preventDefault(); route(a.dataset.route);
+});
+window.addEventListener('popstate', ()=>{ route((location.hash||'#home').slice(1), false) });
+route((location.hash||'#home').slice(1), false);
+
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', ()=>{ nav.classList.toggle('solid', window.scrollY > 60) }, {passive:true});
+document.getElementById('burger').addEventListener('click', ()=>nav.classList.toggle('open'));
+
+let io;
+function initReveals(){
+  if(io) io.disconnect();
+  const els = document.querySelectorAll('.page.active .reveal');
+  els.forEach(el=>el.classList.remove('in'));
+  io = new IntersectionObserver(entries=>{
+    entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+  },{threshold:.12, rootMargin:'0px 0px -8% 0px'});
+  els.forEach(el=>io.observe(el));
+}
+initReveals();
+
+document.getElementById('year').textContent = new Date().getFullYear();
+(function(){
+  const today = new Date().getDay();
+  document.querySelectorAll(`[data-day="${today}"]`).forEach(el=>el.classList.add('today'));
+})();
+
+// Hydrate images from KIMG map (injected below)
+function hydrateImages(){
+  if(typeof KIMG === 'undefined') return;
+  document.querySelectorAll('img[data-img]').forEach(el=>{
+    const k = el.dataset.img;
+    if(KIMG[k]) el.src = KIMG[k];
+  });
+}
+if(document.readyState !== 'loading') hydrateImages();
+else document.addEventListener('DOMContentLoaded', hydrateImages);
+</script>
+</body>
+</html>
