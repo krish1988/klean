@@ -2331,16 +2331,29 @@ body::before {
   
   .nav.open .nav__menu {
     display: flex;
+    position: absolute;
+    height: 100%;
+    width: 100%;
   }
   
   .nav.open,
   .nav.solid.open {
-    color: var(--ink);
-    mix-blend-mode: normal;
-    background: transparent !important;
+    display: block !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    background: var(--paper) !important;
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
     border-bottom: none !important;
+    transition: none !important;
+    mix-blend-mode: normal !important;
+    color: var(--ink) !important;
+  }
+
+  .nav.open .nav__brand {
+    position: relative;
+    z-index: 61;
+    color: var(--ink);
   }
   
   .nav__menu .nav__link {
@@ -2350,6 +2363,14 @@ body::before {
   .nav__burger {
     display: block;
     z-index: 60;
+  }
+
+  .nav.open .nav__burger {
+    position: absolute;
+    top: 22px;
+    right: var(--pad-x);
+    z-index: 61;
+    color: var(--ink);
   }
   
   .hero-strip {
