@@ -224,7 +224,7 @@ export default function Contact() {
               <div>
                 <div className="info-card__label">Écrivez-nous</div>
                 <div className="info-card__value">
-                  <a href="mailto:contact@kelanecreations.fr">contact@kelanecreations.fr</a>
+                  <a href="mailto:contact@kelanecreations.com">contact@kelanecreations.com</a>
                 </div>
               </div>
             </div>

@@ -57,7 +57,7 @@ export default function Footer() {
               <a href="tel:0389604345">03 89 60 43 45</a>
             </li>
             <li>
-              <a href="mailto:contact@kelanecreations.fr">contact@kelanecreations.fr</a>
+              <a href="mailto:contact@kelanecreations.com">contact@kelanecreations.com</a>
             </li>
           </ul>
         </div>
