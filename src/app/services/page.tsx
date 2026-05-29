@@ -86,6 +86,22 @@ export default function Services() {
 
         <div className="svc-row reveal">
           <div className="svc-row__num">05</div>
+          <h2 className="svc-row__title">
+            Broderie<br /><em>personnalisée</em>
+          </h2>
+          <div className="svc-row__body">
+            Personnalisation d'exception et ennoblissement de vos textiles en atelier. Monogrammes brodés à la main, motifs d'art contemporains ou classiques pour signer vos coussins, linges de maison, dossiers de chaises et têtes de lit.
+            <div className="svc-row__tags">
+              <span>Monogrammes</span><span>Fils d'or & soie</span><span>Ennoblissement</span><span>Motifs uniques</span>
+            </div>
+          </div>
+          <div className="svc-row__thumb">
+            <img src="/images/embroidery-detail.png" alt="Broderie personnalisée" />
+          </div>
+        </div>
+
+        <div className="svc-row reveal">
+          <div className="svc-row__num">06</div>
           <h2 className="svc-row__title">Restauration</h2>
           <div className="svc-row__body">
             Pièces de famille, mobilier d'époque, sièges chinés : nous redonnons une seconde vie aux meubles à valeur sentimentale ou patrimoniale, dans le respect des techniques d'origine.
@@ -99,7 +115,7 @@ export default function Services() {
         </div>
 
         <div className="svc-row reveal">
-          <div className="svc-row__num">06</div>
+          <div className="svc-row__num">07</div>
           <h2 className="svc-row__title">Réparations</h2>
           <div className="svc-row__body">
             Réfection ponctuelle d'un accoudoir, remplacement d'une mousse affaissée, ajustement d'un mécanisme, recoutu invisible. Pour donner aux pièces que vous aimez les années supplémentaires qu'elles méritent.
@@ -113,7 +129,7 @@ export default function Services() {
         </div>
 
         <div className="svc-row reveal">
-          <div className="svc-row__num">07</div>
+          <div className="svc-row__num">08</div>
           <h2 className="svc-row__title">
             Livraison &amp; <em>pose</em>
           </h2>

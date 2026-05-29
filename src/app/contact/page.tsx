@@ -142,6 +142,7 @@ export default function Contact() {
                 <option value="Rideaux sur-mesure">Rideaux sur-mesure</option>
                 <option value="Stores">Stores</option>
                 <option value="Coussins">Coussins</option>
+                <option value="Broderie personnalisée">Broderie personnalisée</option>
                 <option value="Tapisserie / réfection de siège">Tapisserie / réfection de siège</option>
                 <option value="Restauration">Restauration</option>
                 <option value="Visite-conseil à domicile">Visite-conseil à domicile</option>
