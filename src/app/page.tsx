@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import useScrollReveal from "@/hooks/useScrollReveal";
 
 export default function Home() {
@@ -11,9 +12,13 @@ export default function Home() {
       {/* HERO */}
       <section className="hero" id="home">
         <div className="hero__media">
-          <img 
+          <Image 
             src="/images/storefront.jpg" 
             alt="Atelier Kélane Créations" 
+            fill
+            priority
+            sizes="100vw"
+            style={{ objectFit: "cover" }}
           />
         </div>
         <div className="hero__content">
@@ -41,13 +46,13 @@ export default function Home() {
       {/* HERO STRIP */}
       <section className="hero-strip">
         <div className="hero-strip__item" data-label="Showroom">
-          <img src="/images/interior-tree.jpg" alt="Showroom mural" />
+          <Image src="/images/interior-tree.jpg" alt="Showroom mural" fill sizes="(max-width: 560px) 100vw, 33vw" style={{ objectFit: "cover" }} />
         </div>
         <div className="hero-strip__item" data-label="Collection">
-          <img src="/images/cushions-top.jpg" alt="Collection de coussins" />
+          <Image src="/images/cushions-top.jpg" alt="Collection de coussins" fill sizes="(max-width: 560px) 100vw, 33vw" style={{ objectFit: "cover" }} />
         </div>
         <div className="hero-strip__item" data-label="Détails">
-          <img src="/images/interior-swan.jpg" alt="Détail fauteuil" />
+          <Image src="/images/interior-swan.jpg" alt="Détail fauteuil" fill sizes="(max-width: 560px) 100vw, 33vw" style={{ objectFit: "cover" }} />
         </div>
       </section>
 
@@ -105,25 +110,25 @@ export default function Home() {
         </div>
         <div className="lookbook__grid">
           <div className="lb lb-1 reveal">
-            <img src="/images/interior-mural.jpg" alt="Vue showroom complet" />
+            <Image src="/images/interior-mural.jpg" alt="Vue showroom complet" fill sizes="(max-width: 980px) 100vw, 50vw" style={{ objectFit: "cover" }} />
             <div className="lb__caption">
               <small>Édition № 01</small>Un <em>récit</em><br />en clair-obscur.
             </div>
           </div>
           <div className="lb lb-2 reveal" data-delay="1">
-            <img src="/images/cushions-mid.jpg" alt="Étagère de coussins" />
+            <Image src="/images/cushions-mid.jpg" alt="Étagère de coussins" fill sizes="(max-width: 980px) 100vw, 25vw" style={{ objectFit: "cover" }} />
             <div className="lb__caption">
               <small>Collection · Coussins</small>Les <em>accents</em>.
             </div>
           </div>
           <div className="lb lb-3 reveal" data-delay="2">
-            <img src="/images/interior-swan.jpg" alt="Fauteuil contemporain" />
+            <Image src="/images/interior-swan.jpg" alt="Fauteuil contemporain" fill sizes="(max-width: 980px) 100vw, 25vw" style={{ objectFit: "cover" }} />
             <div className="lb__caption">
               <small>Pièces signature</small>Le <em>fauteuil</em>.
             </div>
           </div>
           <div className="lb lb-4 reveal" data-delay="1">
-            <img src="/images/storefront-window.jpg" alt="Vitrine boutique" />
+            <Image src="/images/storefront-window.jpg" alt="Vitrine boutique" fill sizes="(max-width: 980px) 100vw, 25vw" style={{ objectFit: "cover" }} />
             <div className="lb__caption">
               <small>Vitrine</small>Une <em>vitrine</em><br />vivante.
             </div>
@@ -136,7 +141,7 @@ export default function Home() {
             </p>
           </div>
           <div className="lb lb-6 reveal" data-delay="3">
-            <img src="/images/cushions-detail.jpg" alt="Détail textile" />
+            <Image src="/images/cushions-detail.jpg" alt="Détail textile" fill sizes="(max-width: 980px) 100vw, 50vw" style={{ objectFit: "cover" }} />
             <div className="lb__caption">
               <small>Détail · Texture</small><em>Toucher</em>.
             </div>
@@ -395,11 +400,11 @@ export default function Home() {
         <div className="svc-grid">
           <Link href="/services" className="svc-card s-1 reveal">
             <div className="svc-card__bg">
-              <img src="/images/cushions-detail.jpg" alt="" />
+              <Image src="/images/cushions-detail.jpg" alt="" fill sizes="(max-width: 980px) 100vw, 33vw" style={{ objectFit: "cover" }} />
             </div>
             <div>
               <div className="svc-card__num">01 — Signature</div>
-              <h3 className="svc-card__title" style={{ marginTop: "18px" }}>
+               <h3 className="svc-card__title" style={{ marginTop: "18px" }}>
                 Tapisserie<br /><em>d'ameublement</em>
               </h3>
             </div>
@@ -411,7 +416,7 @@ export default function Home() {
 
           <Link href="/services" className="svc-card s-2 reveal" data-delay="1">
             <div className="svc-card__bg">
-              <img src="/images/interior-tree.jpg" alt="" />
+              <Image src="/images/interior-tree.jpg" alt="" fill sizes="(max-width: 980px) 100vw, 33vw" style={{ objectFit: "cover" }} />
             </div>
             <div>
               <div className="svc-card__num">02</div>
@@ -427,7 +432,7 @@ export default function Home() {
 
           <Link href="/services" className="svc-card s-3 reveal" data-delay="2">
             <div className="svc-card__bg">
-              <img src="/images/storefront-window.jpg" alt="" />
+              <Image src="/images/storefront-window.jpg" alt="" fill sizes="(max-width: 980px) 100vw, 33vw" style={{ objectFit: "cover" }} />
             </div>
             <div>
               <div className="svc-card__num">03</div>
@@ -441,7 +446,7 @@ export default function Home() {
 
           <Link href="/services" className="svc-card s-4 reveal" data-delay="1">
             <div className="svc-card__bg">
-              <img src="/images/cushions-top.jpg" alt="" />
+              <Image src="/images/cushions-top.jpg" alt="" fill sizes="(max-width: 980px) 100vw, 33vw" style={{ objectFit: "cover" }} />
             </div>
             <div>
               <div className="svc-card__num">04</div>
@@ -455,7 +460,7 @@ export default function Home() {
 
           <Link href="/services" className="svc-card s-5 reveal" data-delay="2">
             <div className="svc-card__bg">
-              <img src="/images/interior-swan.jpg" alt="" />
+              <Image src="/images/interior-swan.jpg" alt="" fill sizes="(max-width: 980px) 100vw, 33vw" style={{ objectFit: "cover" }} />
             </div>
             <div>
               <div className="svc-card__num">05</div>
@@ -469,7 +474,7 @@ export default function Home() {
 
           <Link href="/services" className="svc-card s-6 reveal" data-delay="3">
             <div className="svc-card__bg">
-              <img src="/images/interior-sofa.jpg" alt="" />
+              <Image src="/images/interior-sofa.jpg" alt="" fill sizes="(max-width: 980px) 100vw, 33vw" style={{ objectFit: "cover" }} />
             </div>
             <div>
               <div className="svc-card__num">06</div>
@@ -486,7 +491,7 @@ export default function Home() {
       {/* PHOTO STRIP */}
       <section className="photo-strip">
         <div className="photo-strip__media">
-          <img src="/images/cushions-display.jpg" alt="Collection de coussins Kélane" />
+          <Image src="/images/cushions-display.jpg" alt="Collection de coussins Kélane" fill sizes="(max-width: 980px) 100vw, 50vw" style={{ objectFit: "cover" }} />
         </div>
         <div className="photo-strip__content">
           <span className="eyebrow reveal">Showroom</span>
@@ -529,7 +534,7 @@ export default function Home() {
         <div className="portfolio__grid">
           <article className="work reveal">
             <span className="work__num">01</span>
-            <img src="/images/interior-tree.jpg" alt="Aménagement Mulhouse" />
+            <Image src="/images/interior-tree.jpg" alt="Aménagement Mulhouse" fill sizes="(max-width: 560px) 100vw, (max-width: 980px) 50vw, 33vw" style={{ objectFit: "cover" }} />
             <div className="work__overlay">
               <span className="work__cat">Aménagement complet</span>
               <h3 className="work__title">Maison de <em>maître</em><br />Mulhouse</h3>
@@ -538,7 +543,7 @@ export default function Home() {
 
           <article className="work reveal" data-delay="1">
             <span className="work__num">02</span>
-            <img src="/images/cushions-mid.jpg" alt="Coussins Bâle" />
+            <Image src="/images/cushions-mid.jpg" alt="Coussins Bâle" fill sizes="(max-width: 560px) 100vw, (max-width: 980px) 50vw, 33vw" style={{ objectFit: "cover" }} />
             <div className="work__overlay">
               <span className="work__cat">Coussins · Collection</span>
               <h3 className="work__title">Suite <em>parentale</em><br />Bâle</h3>
@@ -547,7 +552,7 @@ export default function Home() {
 
           <article className="work reveal" data-delay="2">
             <span className="work__num">03</span>
-            <img src="/images/interior-swan.jpg" alt="Fauteuil Riedisheim" />
+            <Image src="/images/interior-swan.jpg" alt="Fauteuil Riedisheim" fill sizes="(max-width: 560px) 100vw, (max-width: 980px) 50vw, 33vw" style={{ objectFit: "cover" }} />
             <div className="work__overlay">
               <span className="work__cat">Fauteuil contemporain</span>
               <h3 className="work__title">Salon <em>privé</em><br />Riedisheim</h3>
@@ -556,7 +561,7 @@ export default function Home() {
 
           <article className="work reveal" data-delay="1">
             <span className="work__num">04</span>
-            <img src="/images/storefront-window.jpg" alt="Rideaux Saint-Louis" />
+            <Image src="/images/storefront-window.jpg" alt="Rideaux Saint-Louis" fill sizes="(max-width: 560px) 100vw, (max-width: 980px) 50vw, 33vw" style={{ objectFit: "cover" }} />
             <div className="work__overlay">
               <span className="work__cat">Rideaux sur-mesure</span>
               <h3 className="work__title">Bureau <em>d'architecte</em><br />Saint-Louis</h3>
@@ -565,7 +570,7 @@ export default function Home() {
 
           <article className="work reveal" data-delay="2">
             <span className="work__num">05</span>
-            <img src="/images/cushions-top.jpg" alt="Coussins Colmar" />
+            <Image src="/images/cushions-top.jpg" alt="Coussins Colmar" fill sizes="(max-width: 560px) 100vw, (max-width: 980px) 50vw, 33vw" style={{ objectFit: "cover" }} />
             <div className="work__overlay">
               <span className="work__cat">Coussins · Hôtellerie</span>
               <h3 className="work__title">Lobby <em>hôtel</em><br />Colmar</h3>
@@ -574,7 +579,7 @@ export default function Home() {
 
           <article className="work reveal" data-delay="3">
             <span className="work__num">06</span>
-            <img src="/images/interior-sofa.jpg" alt="Canapé Rixheim" />
+            <Image src="/images/interior-sofa.jpg" alt="Canapé Rixheim" fill sizes="(max-width: 560px) 100vw, (max-width: 980px) 50vw, 33vw" style={{ objectFit: "cover" }} />
             <div className="work__overlay">
               <span className="work__cat">Restauration · Canapé</span>
               <h3 className="work__title">Pièce de <em>famille</em><br />Rixheim</h3>
@@ -640,7 +645,7 @@ export default function Home() {
       {/* CONTACT TEASER */}
       <section className="contact-teaser">
         <div className="contact-teaser__bg">
-          <img src="/images/storefront.jpg" alt="Contact" />
+          <Image src="/images/storefront.jpg" alt="Contact" fill sizes="100vw" style={{ objectFit: "cover" }} />
         </div>
         <span className="eyebrow reveal">Prendre rendez-vous</span>
         <h2 className="h-display reveal" data-delay="1">

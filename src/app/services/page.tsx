@@ -1,6 +1,7 @@
 "use client";
 
 import useScrollReveal from "@/hooks/useScrollReveal";
+import Image from "next/image";
 
 export default function Services() {
   useScrollReveal();
@@ -36,7 +37,7 @@ export default function Services() {
             </div>
           </div>
           <div className="svc-row__thumb">
-            <img src="/images/cushions-detail.jpg" alt="Tapisserie d'ameublement" />
+            <Image src="/images/cushions-detail.jpg" alt="Tapisserie d'ameublement" fill sizes="(max-width: 980px) 100vw, 40vw" style={{ objectFit: "cover" }} />
           </div>
         </div>
 
@@ -52,7 +53,7 @@ export default function Services() {
             </div>
           </div>
           <div className="svc-row__thumb">
-            <img src="/images/interior-tree.jpg" alt="Rideaux sur-mesure" />
+            <Image src="/images/interior-tree.jpg" alt="Rideaux sur-mesure" fill sizes="(max-width: 980px) 100vw, 40vw" style={{ objectFit: "cover" }} />
           </div>
         </div>
 
@@ -66,7 +67,7 @@ export default function Services() {
             </div>
           </div>
           <div className="svc-row__thumb">
-            <img src="/images/storefront-window.jpg" alt="Stores" />
+            <Image src="/images/storefront-window.jpg" alt="Stores" fill sizes="(max-width: 980px) 100vw, 40vw" style={{ objectFit: "cover" }} />
           </div>
         </div>
 
@@ -80,7 +81,7 @@ export default function Services() {
             </div>
           </div>
           <div className="svc-row__thumb">
-            <img src="/images/cushions-top.jpg" alt="Coussins" />
+            <Image src="/images/cushions-top.jpg" alt="Coussins" fill sizes="(max-width: 980px) 100vw, 40vw" style={{ objectFit: "cover" }} />
           </div>
         </div>
 
@@ -96,7 +97,7 @@ export default function Services() {
             </div>
           </div>
           <div className="svc-row__thumb">
-            <img src="/images/embroidery-detail.png" alt="Broderie personnalisée" />
+            <Image src="/images/embroidery-detail.png" alt="Broderie personnalisée" fill sizes="(max-width: 980px) 100vw, 40vw" style={{ objectFit: "cover" }} />
           </div>
         </div>
 
@@ -110,7 +111,7 @@ export default function Services() {
             </div>
           </div>
           <div className="svc-row__thumb">
-            <img src="/images/interior-swan.jpg" alt="Restauration" />
+            <Image src="/images/interior-swan.jpg" alt="Restauration" fill sizes="(max-width: 980px) 100vw, 40vw" style={{ objectFit: "cover" }} />
           </div>
         </div>
 
@@ -124,7 +125,7 @@ export default function Services() {
             </div>
           </div>
           <div className="svc-row__thumb">
-            <img src="/images/interior-sofa.jpg" alt="Réparations" />
+            <Image src="/images/interior-sofa.jpg" alt="Réparations" fill sizes="(max-width: 980px) 100vw, 40vw" style={{ objectFit: "cover" }} />
           </div>
         </div>
 
@@ -140,7 +141,7 @@ export default function Services() {
             </div>
           </div>
           <div className="svc-row__thumb">
-            <img src="/images/cushions-mid.jpg" alt="Livraison &amp; pose" />
+            <Image src="/images/cushions-mid.jpg" alt="Livraison &amp; pose" fill sizes="(max-width: 980px) 100vw, 40vw" style={{ objectFit: "cover" }} />
           </div>
         </div>
       </section>
@@ -216,7 +217,9 @@ export default function Services() {
       {/* SPOTLIGHT */}
       <section className="svc-spotlight">
         <div className="svc-spotlight__inner">
-          <img src="/images/interior-mural.jpg" className="reveal" alt="Showroom Kélane" />
+          <div className="reveal" style={{ position: "relative", aspectRatio: "4/5", width: "100%" }}>
+            <Image src="/images/interior-mural.jpg" alt="Showroom Kélane" fill sizes="(max-width: 980px) 100vw, 50vw" style={{ objectFit: "cover", borderRadius: "4px" }} />
+          </div>
           <div>
             <div className="eyebrow reveal" style={{ color: "rgba(243, 236, 225, .7)" }}>
               L'expérience Kélane

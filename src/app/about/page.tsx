@@ -1,6 +1,7 @@
 "use client";
 
 import useScrollReveal from "@/hooks/useScrollReveal";
+import Image from "next/image";
 
 export default function About() {
   useScrollReveal();
@@ -19,7 +20,7 @@ export default function About() {
           </p>
         </div>
         <div className="about-hero__media">
-          <img src="/images/interior-mural-2.jpg" alt="Intérieur de l'atelier Kélane" />
+          <Image src="/images/interior-mural-2.jpg" alt="Intérieur de l'atelier Kélane" fill sizes="(max-width: 980px) 100vw, 50vw" priority style={{ objectFit: "cover" }} />
         </div>
       </section>
 
@@ -38,25 +39,25 @@ export default function About() {
         </div>
         <div className="atelier-grid">
           <div className="ag ag-1 zoom reveal">
-            <img src="/images/interior-mural.jpg" alt="Showroom Kélane" />
+            <Image src="/images/interior-mural.jpg" alt="Showroom Kélane" fill sizes="(max-width: 560px) 100vw, (max-width: 980px) 50vw, 25vw" style={{ objectFit: "cover" }} />
           </div>
           <div className="ag ag-2 zoom reveal" data-delay="1">
-            <img src="/images/cushions-top.jpg" alt="Coussins exposés" />
+            <Image src="/images/cushions-top.jpg" alt="Coussins exposés" fill sizes="(max-width: 560px) 100vw, (max-width: 980px) 50vw, 25vw" style={{ objectFit: "cover" }} />
           </div>
           <div className="ag ag-3 zoom reveal" data-delay="2">
-            <img src="/images/storefront-logo.jpg" alt="Logo de l'atelier" />
+            <Image src="/images/storefront-logo.jpg" alt="Logo de l'atelier" fill sizes="(max-width: 560px) 100vw, (max-width: 980px) 50vw, 25vw" style={{ objectFit: "cover" }} />
           </div>
           <div className="ag ag-4 zoom reveal" data-delay="1">
-            <img src="/images/cushions-mid.jpg" alt="Coussins sur étagère" />
+            <Image src="/images/cushions-mid.jpg" alt="Coussins sur étagère" fill sizes="(max-width: 560px) 100vw, (max-width: 980px) 50vw, 25vw" style={{ objectFit: "cover" }} />
           </div>
           <div className="ag ag-5 zoom reveal" data-delay="2">
-            <img src="/images/interior-swan.jpg" alt="Détail fauteuil" />
+            <Image src="/images/interior-swan.jpg" alt="Détail fauteuil" fill sizes="(max-width: 560px) 100vw, (max-width: 980px) 50vw, 25vw" style={{ objectFit: "cover" }} />
           </div>
           <div className="ag ag-6 zoom reveal" data-delay="3">
-            <img src="/images/interior-sofa.jpg" alt="Canapé restauré" />
+            <Image src="/images/interior-sofa.jpg" alt="Canapé restauré" fill sizes="(max-width: 560px) 100vw, (max-width: 980px) 50vw, 25vw" style={{ objectFit: "cover" }} />
           </div>
           <div className="ag ag-7 zoom reveal" data-delay="2">
-            <img src="/images/cushions-detail.jpg" alt="Détail couture" />
+            <Image src="/images/cushions-detail.jpg" alt="Détail couture" fill sizes="(max-width: 560px) 100vw, (max-width: 980px) 50vw, 25vw" style={{ objectFit: "cover" }} />
           </div>
         </div>
       </section>
@@ -76,6 +77,12 @@ export default function About() {
           <div className="pull reveal">
             « Une étoffe bien posée raconte autant que le meuble qu'elle habille. »
           </div>
+          <h3 className="reveal">
+            Les <em>matières</em><br />avant tout.
+          </h3>
+          <p className="reveal">
+            Nous travaillons en partenariat avec les plus belles éditions textiles européennes et nous prêtons une attention particulière aux fabrications française et italienne. Lin, velours, jacquards, soies tissées : chaque pièce mérite la matière qui lui rendra son éclat.
+          </p>
           <h3 className="reveal">
             Les <em>matières</em><br />avant tout.
           </h3>

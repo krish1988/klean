@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import useScrollReveal from "@/hooks/useScrollReveal";
+import Image from "next/image";
 
 export default function Contact() {
   useScrollReveal();
@@ -68,7 +69,7 @@ export default function Contact() {
       {/* HERO */}
       <section className="contact-hero">
         <div className="contact-hero__bg">
-          <img src="/images/storefront.jpg" alt="Contact Kélane Créations" />
+          <Image src="/images/storefront.jpg" alt="Contact Kélane Créations" fill priority sizes="100vw" style={{ objectFit: "cover" }} />
         </div>
         <span className="eyebrow reveal">Contact</span>
         <h1 className="h-display reveal" data-delay="1">
